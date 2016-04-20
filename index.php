@@ -17,6 +17,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<?php if ( is_active_sidebar( 'front' ) ) : ?>
+			<div id="region-front" class="region-front widgets">
+				<?php dynamic_sidebar( 'front' ); ?>
+			</div><!-- #region-front -->
+		<?php endif; ?>
+
+
 		<?php
 		if ( have_posts() ) :
 

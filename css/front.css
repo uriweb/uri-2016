@@ -60,31 +60,33 @@ Theme Name: uri2016
 
 
 
-.front .expert {
+.front .experts article {
 	display: inline-block;
 	margin: 0 15px 0 0;
 	vertical-align: top;
 	width: 220px;
 }
-.front .expert:last-of-type {
+.front .experts article:last-of-type {
 	margin: 0;
 }
-.front .expert figure {
+.front .experts article figure {
 	margin: 0 0 1em;
 	max-height: 328px;
 	overflow: hidden;
 }
-.front .expert figure img {
+.front .experts article figure img {
 	width: 100%;
 }
 
-.front .ramfam {
+
+
+.front article.ramfam {
 	display: inline-block;
 	margin: 0 15px 0 0;
 	vertical-align: middle;
 	width: 220px;
 }
-.front .ramfam:last-of-type {
+.front article.ramfam:last-of-type {
 	margin: 0;
 }
 
