@@ -24,7 +24,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,900|Source+Sans+Pro:400,700") all;
 @import url("css/menu.css") all;
-@import url("css/front.css") all; /* @todo: make this conditional for the front page */
 @import url("layouts/content-sidebar.css") all;
 
 /*--------------------------------------------------------------

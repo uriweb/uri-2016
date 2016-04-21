@@ -124,8 +124,9 @@ add_action( 'widgets_init', 'uri2016_widgets_init' );
  */
 function uri2016_scripts() {
 	wp_enqueue_style( 'uri2016-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'uri2016-menu', get_template_directory_uri() . '/js/uri-menu.js', array(), '20151215', true );
+	if( is_front_page() ) {
+		wp_enqueue_style( 'uri2016-style-front', get_template_directory_uri() . '/css/front.css' );
+	}
 
 	wp_enqueue_script( 'uri2016-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

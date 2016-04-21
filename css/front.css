@@ -92,7 +92,8 @@ Theme Name: uri2016
 
 
 
-.front div.more {
+.front div.more,
+.front div.more-social {
 	margin: 1em 0 1.5em;
 	text-align: center;
 }
@@ -117,6 +118,15 @@ Theme Name: uri2016
 	background-color: #032553;
 }
 
+.front div.more-social a {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 1em 2em;
+}
+
+.front div.more-social a img {
+	width: 80%;
+}
 
 .social article {
 	display: inline-block;
