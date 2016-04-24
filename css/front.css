@@ -16,6 +16,7 @@ Theme Name: uri2016
 }
 .front a:hover {
 	color: #032553;
+	text-decoration: none;
 }
 
 .front .news .primary {
