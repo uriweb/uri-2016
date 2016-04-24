@@ -27,7 +27,14 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'uri2016' ); ?></a>
 	<div class="site">
 		<hgroup>
-			<h1><a href="http://uri.edu">The University of Rhode Island</a></h1>
+			<!--h1><a href="http://uri.edu"><object type="image/svg+xml" data="<?php print get_template_directory_uri(); ?>/img/uri-logo.svg" id="uri-logo">The University of Rhode Island</object></a></h1-->
+			<h1><a href="http://uri.edu">
+				<span id="logo">
+					<span class="the">The</span>
+					<span class="university"><b>U</b>nive<b>r</b>s<b>i</b>ty</span>
+					<span class="of-rhode-island">of Rhode Island</span>
+				</span>
+			</a></h1>
 			<h2 class="think-big-we-do">Think Big. We Do.</h2>
 		</hgroup>
 		<div class="search-wrapper"><?php get_search_form(); ?></div>

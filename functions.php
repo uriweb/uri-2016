@@ -126,6 +126,8 @@ function uri2016_scripts() {
 	$theme = get_template_directory_uri();
 	wp_enqueue_style( 'uri2016-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'uri2016-menu', $theme . '/js/uri-menu.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'uri2016-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	
 	if( is_front_page() ) {
 		wp_enqueue_style( 'uri2016-style-front', $theme . '/css/front.css' );

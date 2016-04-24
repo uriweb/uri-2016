@@ -915,23 +915,53 @@ a:active {
 .uri-branding {
 	background-color: #12284A;
 	border-top: 6px solid #c4960c;
-	height: 170px;
+	height: 158px;
 	padding-top: 1.75em;
 	overflow: visible;
 }
-.uri-branding h1 a {
-	background: transparent url(img/uri-logo.svg) 0 0 no-repeat;
-	display: block;
-	height: 86px;
-	text-indent: -999em;
-	width: 207px;
+.uri-branding h1 {
+	line-height: 0;
+	margin-top: .75rem;
 }
+.uri-branding h1 a {
+	/*background: transparent url(img/uri-logo.svg) 0 0 no-repeat;*/
+	color: #c4960c;
+	display: block;
+	height: 89px;
+	/* text-indent: -999em; */
+	width: 209px;
+}
+
+#logo {
+	font: 500 18px trajan-pro-3, Times, serif;
+	text-transform: uppercase;
+}
+#logo span {
+	display: block;
+}
+#logo .the,
+#logo .of-rhode-island {
+	letter-spacing: .055rem;
+	margin-bottom: -.375rem;
+}
+#logo .university {
+	font-size: 30px;
+	margin-bottom: -.3rem;
+}
+#logo b {
+	font-weight: inherit;
+	transition: color 250ms cubic-bezier(.3, .6, .6, 1);
+}
+.uri-branding h1 a:hover b {
+	color: #f0e7B9;
+}
+
 .think-big-we-do {
 	background: transparent url(img/think-big-we-do.png) 0 0 no-repeat;
 	background-size: contain;
 	float: right;
 	height: 87px;
-	margin-top: -35px;
+	margin-top: -41px;
 	position: relative;
 	text-indent: -999em;
 	width: 202px;
@@ -957,13 +987,16 @@ a:active {
 	text-shadow: #000 2px 1px 0;
 }
 .site-title {
-	font: 500 48px/1.5 trajan-pro-3, Times, serif;
-	margin-bottom: -.25em;
+	font: 500 48px/1.2 trajan-pro-3, Times, serif;
 }
 .site-title a:link {
 	text-decoration: none;
 	box-shadow: none;
 	border: 0;
+}
+.site-title a:hover {
+	background-color: #CCE4FF;
+	text-decoration: underline;
 }
 .site-description {
 	font: 600 18px/1.5 'Source Sans Pro', sans-serif;
@@ -971,12 +1004,27 @@ a:active {
 .search-wrapper {
 	clear: right;
 	float: right;
-	margin-top: -200px;
+	margin-top: -180px;
+	text-align: right;
+}
+.search-wrapper label {
+	margin-right: -4px;
 }
 .search-wrapper input {
-	height: 23px;
-	padding: 4px;
+	height: 2.25rem;
+	padding: .375rem .75rem;
+	transition: color 150ms cubic-bezier(.3, .6, .6, 1);
 }
+.search-wrapper input.search-field {
+	border: 0;
+	border-radius: 0;
+	font: 600 18px/1.5 'Source Sans Pro', sans-serif;
+	-webkit-appearance: textfield;
+}
+.search-wrapper input.search-submit:hover {
+	background-color: #c4960c;
+}
+
 .single .site-main, .home .site-main {
 	margin-right: 0;
 }

@@ -11,7 +11,7 @@
 			</ul>
 		</div>
 		<ul id="links">
-			<li class="parentcat"><a href="#">About URI</a>
+			<li class="parentcat"><a href="http://web.uri.edu/about/">About URI</a>
 				<ul>
 					<li><a href="http://web.uri.edu/about/">About URI</a></li>
 					<li><a href="http://web.uri.edu/about/campuses/">Campuses</a></li>
@@ -23,7 +23,7 @@
 					<li><a href="http://web.uri.edu/about/services/">A-Z</a></li>
 				</ul>
 			</li>
-			<li class="parentcat"><a href="#">Admission</a>
+			<li class="parentcat"><a href="http://web.uri.edu/admission/">Admission</a>
 				<ul>
 					<li><a href="http://web.uri.edu/admission/">Undergraduate</a></li>
 					<li><a href="http://web.uri.edu/graduate-school/">Graduate</a></li>
@@ -33,7 +33,7 @@
 					<li><a href="http://web.uri.edu/enrollment/financial-aid/">Financial Aid</a></li>
 				</ul>
 			</li>
-			<li class="parentcat"><a href="#">Academics</a>
+			<li class="parentcat"><a href="http://web.uri.edu/academics/">Academics</a>
 				<ul>
 					<li><a href="http://web.uri.edu/academics/">Academics Home</a></li>
 					<li><a href="http://web.uri.edu/advising/majors/">Majors</a></li>
@@ -46,10 +46,10 @@
 					<li><a href="http://web.uri.edu/learningonline">Online Learning</a></li>
 				</ul>
 			</li>
-			<li class="parentcat"><a href="#">Campus Life</a>
+			<li class="parentcat"><a href="http://web.uri.edu/campus-life/">Campus Life</a>
 				<ul>
-					<li><a href="http://events.uri.edu/">Events</a></li>
 					<li><a href="http://web.uri.edu/campus-life/">Campus Life Home</a></li>
+					<li><a href="http://events.uri.edu/">Events</a></li>
 					<li><a href="http://housing.uri.edu/">Housing</a></li>
 					<li><a href="http://web.uri.edu/dining/">Dining</a></li>
 					<li><a href="http://studentorg.apps.uri.edu">Student Organizations</a></li>
@@ -61,14 +61,14 @@
 					<li><a href="http://www.uri.edu/bookstore/navigate/">Bookstore</a></li>
 				</ul>				
 			</li>
-			<li class="parentcat"><a href="#">Athletics</a>
+			<li class="parentcat"><a href="ttp://www.gorhody.com">Athletics</a>
 				<ul>
 					<li><a href="http://www.gorhody.com">Intercollegiate Athletics</a></li>
 					<li><a href="http://web.uri.edu/campusrec/">Recreation</a></li>
 					<li><a href="http://www.theryancenter.com/">Ryan Center</a></li>
 				</ul>
 			</li>
-			<li class="parentcat"><a href="#">Research &amp; Outreach</a>
+			<li class="parentcat"><a href="http://web.uri.edu/researchecondev/">Research &amp; Outreach</a>
 				<ul>
 					<li><a href="http://web.uri.edu/researchecondev/">Research and Economic Development</a></li>
 					<li><a href="http://web.uri.edu/bec/">Business Engagement Center</a></li>
@@ -78,7 +78,7 @@
 					<li><a href="http://web.uri.edu/graduate-school/">Graduate Studies</a></li>
 				</ul>
 			</li>
-			<li class="parentcat"><a href="#">Global</a>
+			<li class="parentcat"><a href="http://web.uri.edu/globaluri/">Global</a>
 				<ul>
 					<li><a href="http://web.uri.edu/globaluri/">Global URI</a></li>
 					<li><a href="http://web.uri.edu/globaluri/study-abroad/">Study Abroad</a></li>

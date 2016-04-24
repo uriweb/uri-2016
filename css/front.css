@@ -8,8 +8,14 @@ Theme Name: uri2016
 	margin: 1em 0;
 }
 
+.front a {
+	transition: color 150ms cubic-bezier(.3, .6, .6, 1);
+}
 .front a:link, .front a:visited {
 	color: #4a90e2;
+}
+.front a:hover {
+	color: #032553;
 }
 
 .front .news .primary {
