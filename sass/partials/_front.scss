@@ -181,10 +181,3 @@ Theme Name: uri2016
 .front .hungryfeed_items {
 	column-count: 2;
 }
-
-.front .hungryfeed_items span+span,
-.front .hungryfeed_items span+span {
-	-mozilla-column-break-inside: avoid;
-	-webkit-column-break-inside: avoid;
-	column-break-inside: avoid;
-}

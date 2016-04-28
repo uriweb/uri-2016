@@ -16,11 +16,18 @@ Theme Name: uri2016
 
 	a:link,
 	a:visited {
-		color: $link-color;
+		color: $dark-tint;
 		text-decoration: underline;
 	}
 	a:hover {
-		color: $dark-tint;
+		color: $link-color;
+	}
+	
+	.uri>a {
+		display: none;
+	}
+	.uri .sub-nav {
+		display: block;
 	}
 
 	.parentcat>a:link,
@@ -33,7 +40,7 @@ Theme Name: uri2016
 		text-decoration: none;
 	}
 
-	ul {
+	ul { // top level list
 		margin: 0 0 0 -10px;
 		padding: 0;
 		li {
@@ -41,29 +48,43 @@ Theme Name: uri2016
 			list-style: none;
 			line-height: 2.5;
 			margin: 0;
-			padding: 0 10px 0 10px;
+			padding: 0 10px 0 25px;
 			width: 230px;
 			&:hover {
 				background-color: $accent-light;
-				ul {
+				.sub-nav {
+					background-color: $accent-light;
 					display: block;
 					height: 100%;
 				}
 			}
-			ul {
+			.sub-nav {
 				display: none;
 				left: 230px;
-				margin-right: 10px;
-				padding-left: 10px;
 				position: absolute;
-				top: 40px;
+				width: 730px;
+				top: 0;
+			}
+			ul { // sub lists
+				column-count: 2;
+				max-width: 400px;
+				li {
+					background-color: $accent-light !important;
+					-mozilla-column-break-inside: avoid;
+					-webkit-column-break-inside: avoid;
+					column-break-inside: avoid;
+				}
 			}
 		}
 	}
 
 } // end #nav
 
-
+.nav-feature {
+	bottom: 0;
+	margin-left: 15px;
+	position: absolute;
+}
 .logged-in #nav{
 	top: -288px;
 }
@@ -75,29 +96,13 @@ Theme Name: uri2016
 }
 
 
-#nav-uri {
-	left: 230px;
-	margin-right: 10px;
-	padding-left: 10px;
-	position: absolute;
-	top: 40px;
-}
-
-#nav li li,
-#nav-uri li {
-	background-color: $accent-light !important; // @todo: fix the nav structure
-	display: inline-block;
-	margin: 0 10px;
-	padding: 0;
-	width: 220px;
-}
-
 #nav-toggle {
 	background-color: $accent;
+	color: #000;
 	cursor: pointer;
 	font-weight: 700;
 	bottom: -2.25em;
-	padding: .25em 2em;
+	padding: .25em 1em;
 	position: absolute;
 	text-transform: uppercase;
 	&:after {
