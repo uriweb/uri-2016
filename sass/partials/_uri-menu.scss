@@ -13,7 +13,57 @@ Theme Name: uri2016
 	top: -326px;
 	transition: all 200ms cubic-bezier(1, 0, 1, 1);
 	z-index: 100;
-}
+
+	a:link,
+	a:visited {
+		color: $link-color;
+		text-decoration: underline;
+	}
+	a:hover {
+		color: $dark-tint;
+	}
+
+	.parentcat>a:link,
+	.parentcat>a:visited {
+		color: $background;
+		text-decoration: none;
+	}
+	.parentcat:hover>a {
+		color: $dark-tint;
+		text-decoration: none;
+	}
+
+	ul {
+		margin: 0 0 0 -10px;
+		padding: 0;
+		li {
+			background-color: $accent;
+			list-style: none;
+			line-height: 2.5;
+			margin: 0;
+			padding: 0 10px 0 10px;
+			width: 230px;
+			&:hover {
+				background-color: $accent-light;
+				ul {
+					display: block;
+					height: 100%;
+				}
+			}
+			ul {
+				display: none;
+				left: 230px;
+				margin-right: 10px;
+				padding-left: 10px;
+				position: absolute;
+				top: 40px;
+			}
+		}
+	}
+
+} // end #nav
+
+
 .logged-in #nav{
 	top: -288px;
 }
@@ -24,47 +74,7 @@ Theme Name: uri2016
 	top: 32px;
 }
 
-#nav a:link,
-#nav a:visited {
-	color: $link-color;
-	text-decoration: underline;
-}
-#nav a:hover {
-	color: $dark-tint;
-}
 
-#nav ul {
-	margin: 0 0 0 -10px;
-	padding: 0;
-}
-#nav li {
-	background-color: $accent;
-	list-style: none;
-	line-height: 2.5;
-	margin: 0;
-	padding: 0 10px 0 10px;
-	width: 230px;
-}
-#nav .parentcat>a:link,
-#nav .parentcat>a:visited {
-	color: $background;
-	text-decoration: none;
-}
-#nav .parentcat:hover>a {
-	color: $dark-tint;
-	text-decoration: none;
-}
-#nav li:hover {
-	background-color: $accent-light;
-}
-#nav li ul {
-	display: none;
-	left: 230px;
-	margin-right: 10px;
-	padding-left: 10px;
-	position: absolute;
-	top: 40px;
-}
 #nav-uri {
 	left: 230px;
 	margin-right: 10px;
@@ -72,12 +82,10 @@ Theme Name: uri2016
 	position: absolute;
 	top: 40px;
 }
-#nav li:hover ul {
-	display: block;
-	height: 100%;
-}
-#nav li li, #nav-uri li {
-	background-color: $accent-light;
+
+#nav li li,
+#nav-uri li {
+	background-color: $accent-light !important; // @todo: fix the nav structure
 	display: inline-block;
 	margin: 0 10px;
 	padding: 0;
@@ -92,11 +100,11 @@ Theme Name: uri2016
 	padding: .25em 2em;
 	position: absolute;
 	text-transform: uppercase;
-}
-#nav-toggle:after {
-	content: " \25BE";
-	display: inline-block;
-	padding: 0 .25em;
+	&:after {
+		content: " \25BE";
+		display: inline-block;
+		padding: 0 .25em;
+	}
 }
 .open #nav-toggle:after {
 	transform: rotate(180deg) translateY(-3px);
@@ -111,12 +119,12 @@ Theme Name: uri2016
 	padding-left: 30px;
 	text-transform: uppercase;
 	width: 230px;
-}
-#nav-close:before {
-	content: "\00d7";
-	font-size: 2em;
-	display: inline-block;
-	line-height: 1;
-	vertical-align: -.125em;
-	padding-right: .25em;
+	&:before {
+		content: "\00d7";
+		font-size: 2em;
+		display: inline-block;
+		line-height: 1;
+		vertical-align: -.125em;
+		padding-right: .25em;
+	}
 }
