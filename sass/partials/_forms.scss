@@ -7,7 +7,7 @@ input[type="reset"],
 input[type="submit"] {
 	border: 0;
 	background-color: $accent;
-	color: #404040;
+	color: $text;
 	font-family: $sans;
 	font-size: 16px;
 	font-weight: 700;
@@ -23,7 +23,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background-color: #002147;
+	background-color: $dark-tint;
 	color: $background;
 }
 input[type="reset"]:hover {

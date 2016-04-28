@@ -3,19 +3,19 @@ Theme Name: uri2016
 */
 
 .front h2 {
-	color: #032553;
+	color: $dark-tint;
 	font: 500 36px/1.5 trajan-pro-3, Times, serif;
 	margin: 1em 0;
 }
 
 .front a {
-	transition: color 150ms cubic-bezier(.3, .6, .6, 1);
 }
 .front a:link, .front a:visited {
-	color: #4a90e2;
+	color: $link-color;
+	transition: color 150ms cubic-bezier(.3, .6, .6, 1);
 }
 .front a:hover {
-	color: #032553;
+	color: $dark-tint;
 	text-decoration: none;
 }
 
@@ -111,18 +111,18 @@ Theme Name: uri2016
 }
 
 .front div.more a {
-	background-color: #4a90e2;
+	background-color: $link-color;
 	border-radius: 3px;
 	color: #fff;
 	display: inline-block;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: $sans;
 	font-weight: 700;
 	margin: 0 auto;
 	padding: 1em 2em;
 	text-decoration: none;
 }
 .front div.more a:hover {
-	background-color: #032553;
+	background-color: $dark-tint;
 }
 
 .front div.more-social a {

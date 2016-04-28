@@ -4,12 +4,12 @@
 --------------------------------------------------------------*/
 a, a:link {
 	/* WIRED has the coolest link styles */
-	color: #4a90e2;
+	color: $dark-tint;
 	transition: background 150ms cubic-bezier(.3, .6, .6, 1);
 }
 
 a:visited {
-	color: #002147;
+	color: $dark-tint;
 }
 
 a:hover,
@@ -30,21 +30,21 @@ a:active {
 
 .entry-content a, .entry-content a:link {
 	/* WIRED has the coolest link styles */
-	color: #4a90e2;
+	color: $link-color;
 	color: inherit;
-	border-bottom: 2px solid #cce4ff;
-	box-shadow: inset 0 -4px 0 #aad1ff;
+	border-bottom: 2px solid $medium-light-tint;
+	box-shadow: inset 0 -4px 0 $medium-tint;
 	text-decoration: none;
 	transition: background 150ms cubic-bezier(.3, .6, .6, 1);
 }
 .entry-content a:visited {
-	color: #002147;
+	color: $dark-tint;
 }
 
 .entry-content a:hover,
 .entry-content a:focus,
 .entry-content a:active {
-	background-color: #CCE4FF;
+	background-color: $medium-light-tint;
 	color: inherit;
 }
  
@@ -68,7 +68,7 @@ a:active {
 }
 .entry-footer .edit-link a:hover,
 .entry-footer .comments-link a:hover {
-	background-color: #002147;
+	background-color: $dark-tint;
 }
 
 .tags-links, .edit-link {

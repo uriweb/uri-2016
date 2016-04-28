@@ -3,9 +3,10 @@ Theme Name: uri2016
 */
 
 #nav {
-	background-color: #edd378;
-	border-bottom: 6px solid #c4960c;
-	font-family: 'Source Sans Pro', sans-serif;
+	background-color: $accent-light;
+	border-bottom: 6px solid $accent;
+	font-family: $sans;
+	font-weight: 700;
 	margin: 0 auto;
 	position: fixed;
 	width: 960px;
@@ -25,11 +26,11 @@ Theme Name: uri2016
 
 #nav a:link,
 #nav a:visited {
-	color: #4a90e2;
+	color: $link-color;
 	text-decoration: underline;
 }
 #nav a:hover {
-	color: #032553;
+	color: $dark-tint;
 }
 
 #nav ul {
@@ -37,15 +38,24 @@ Theme Name: uri2016
 	padding: 0;
 }
 #nav li {
-	background-color: #e2bf40;
+	background-color: $accent;
 	list-style: none;
 	line-height: 2.5;
 	margin: 0;
 	padding: 0 10px 0 10px;
 	width: 230px;
 }
+#nav .parentcat>a:link,
+#nav .parentcat>a:visited {
+	color: $background;
+	text-decoration: none;
+}
+#nav .parentcat:hover>a {
+	color: $dark-tint;
+	text-decoration: none;
+}
 #nav li:hover {
-	background-color: #edd378;
+	background-color: $accent-light;
 }
 #nav li ul {
 	display: none;
@@ -67,7 +77,7 @@ Theme Name: uri2016
 	height: 100%;
 }
 #nav li li, #nav-uri li {
-	background-color: #edd378;
+	background-color: $accent-light;
 	display: inline-block;
 	margin: 0 10px;
 	padding: 0;
@@ -75,7 +85,7 @@ Theme Name: uri2016
 }
 
 #nav-toggle {
-	background-color: #c4960c;
+	background-color: $accent;
 	cursor: pointer;
 	font-weight: 700;
 	bottom: -2.25em;
@@ -93,7 +103,7 @@ Theme Name: uri2016
 	transition: all 200ms cubic-bezier(1, 0, 1, 1); 
 }
 #nav-close {
-	background-color: #edd378;
+	background-color: $accent-light;
 	cursor: pointer;
 	font-weight: 700;
 	line-height: 2.5;
