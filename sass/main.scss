@@ -1,0 +1,116 @@
+/** SCSS partials **/
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/** Underscore stylesheet broken out into partials **/
+@import "partials/_normalize.scss";
+@import "partials/_typography-elements.scss";
+@import "partials/_architecture.scss";
+@import "partials/_forms.scss";
+@import "partials/_content-sidebar.scss";
+@import "partials/_front.scss";
+@import "partials/_menus.scss";
+
+/** URI branding and specifics **/
+@import "partials/_uri.scss";
+@import "partials/_uri-menu.scss";
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,900|Source+Sans+Pro:400,700") all;
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+article.post {
+	width: 100%;
+}
+.entry-title {
+	font: 600 28px/1.5 $trajan;
+	margin-bottom: 1em;
+}
+.entry-content {
+	max-width: 620px;
+}
+.entry-footer {
+	margin-bottom: 3em;
+}
+.entry-footer span {
+	margin-right: .5em;
+}
+
+
+/*--------------------------------------------------------------
+## Events (Localist)
+--------------------------------------------------------------*/
+#lw .lwe {
+	font-family: $sans;
+	line-height: 1.5rem;
+}
+#lw ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+#lw li.lwe {
+	border: 0 !important;
+	margin-bottom: 2em;
+	padding: 1em 0 !important;
+}
+#lw .lwn {
+	font-size: 20px;
+	margin-bottom: .5em;
+}
+#lw .lwd {
+	font-family: $serif;
+	font-size: 16px;
+	line-height: 1.5rem;
+}
+#lw .lwl {
+	font-size: 16px;
+}
+
+

@@ -14,9 +14,9 @@ function initSVGHovers() {
 		var svg = els[i].contentDocument;
 		svg.addEventListener("mouseover", function() {
 			this.getElementById("icon").setAttribute("fill", "#032553");
-		})
+		});
 		svg.addEventListener("mouseout", function() {
 			this.getElementById("icon").setAttribute("fill", "#4990E2");
-		})
+		});
 	}
 }

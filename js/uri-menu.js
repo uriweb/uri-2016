@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function initNav() {
 	var tab = document.getElementById("nav-toggle");
-	var nav = document.getElementById("nav")
+	var nav = document.getElementById("nav");
 	tab.addEventListener("click", toggleNavClass, false);
 	nav.className = "closed";
 	// @todo: make this elegant
