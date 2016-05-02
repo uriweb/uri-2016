@@ -1,25 +1,22 @@
 /** SCSS partials **/
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "variables";
+@import "mixins";
 
 /** Underscore stylesheet broken out into partials **/
-@import "partials/_normalize.scss";
-@import "partials/_typography-elements.scss";
-@import "partials/_architecture.scss";
-@import "partials/_forms.scss";
-@import "partials/_front.scss";
-@import "partials/_links.scss";
-@import "partials/_media.scss";
-@import "partials/_menus.scss";
+@import "partials/normalize";
+@import "partials/typography-elements";
+@import "partials/architecture";
+@import "partials/forms";
+@import "partials/front";
+@import "partials/links";
+@import "partials/media";
+@import "partials/menus";
 
 /** URI branding and specifics **/
-@import "partials/_uri.scss";
-@import "partials/_uri-menu.scss";
+@import "partials/uri";
+@import "partials/uri-menu";
+
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,900|Source+Sans+Pro:400,700") all;
-
-
-
-
 
 
 /*--------------------------------------------------------------

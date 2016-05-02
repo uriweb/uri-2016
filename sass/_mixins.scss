@@ -1,12 +1,6 @@
-/*
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+/**
+ *  Handles link fades; also happens to handle main menu slide out
+ */
+@mixin fade($property) {
+	transition: $property 150ms cubic-bezier(.3, .6, .6, 1);
 }
-
-.box { @include border-radius(10px); }
-
-*/

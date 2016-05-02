@@ -34,7 +34,7 @@
 				line-height: 55px;
 				text-align: center;
 				text-decoration: none;
-				transition: background-color 100ms linear;
+				@include fade(background-color);
 			}
 			a:hover {
 				background-color: #4a90e2;
@@ -60,7 +60,7 @@
 					padding-top: 12px;
 					padding-bottom: 12px;
 					width: 200px;
-					transition: background-color 100ms linear;
+					@include fade(background-color);
 				}
 				a:hover {
 					background-color: $link-color;

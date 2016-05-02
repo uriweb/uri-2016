@@ -11,7 +11,8 @@ Theme Name: uri2016
 	position: fixed;
 	width: 960px;
 	top: -326px;
-	transition: all 200ms cubic-bezier(1, 0, 1, 1);
+	@include fade(all);
+	//transition: all 200ms cubic-bezier(1, 0, 1, 1);
 	z-index: 100;
 
 	a:link,
@@ -61,6 +62,7 @@ Theme Name: uri2016
 			.sub-nav {
 				display: none;
 				left: 230px;
+				padding-top: 2.5em;
 				position: absolute;
 				width: 730px;
 				top: 0;
@@ -85,6 +87,13 @@ Theme Name: uri2016
 	margin-left: 15px;
 	position: absolute;
 }
+
+.nav-figure {
+	position: absolute;
+	right: 0;
+	top: 2em;
+}
+
 .logged-in #nav{
 	top: -288px;
 }
@@ -113,7 +122,8 @@ Theme Name: uri2016
 }
 .open #nav-toggle:after {
 	transform: rotate(180deg) translateY(-3px);
-	transition: all 200ms cubic-bezier(1, 0, 1, 1); 
+	//transition: all 200ms cubic-bezier(1, 0, 1, 1); 
+	@include fade(all);
 }
 #nav-close {
 	background-color: $accent-light;

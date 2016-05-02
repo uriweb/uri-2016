@@ -40,7 +40,7 @@
 }
 #logo b {
 	font-weight: inherit;
-	transition: color 250ms cubic-bezier(.3, .6, .6, 1);
+	@include fade(color);
 }
 .uri-branding h1 a:hover b {
 	color: #f0e7B9;
@@ -103,7 +103,7 @@
 .search-wrapper input {
 	height: 2.25rem;
 	padding: .375rem .75rem;
-	transition: color 150ms cubic-bezier(.3, .6, .6, 1);
+	@include fade(color);
 }
 .search-wrapper input.search-field {
 	border: 0;

@@ -13,7 +13,7 @@ input[type="submit"] {
 	font-weight: 700;
 	line-height: 1.5;
 	padding: .6em 1em;
-	transition: background 150ms cubic-bezier(.3, .6, .6, 1);
+	@include fade(background);
 }
 input[type="reset"] {
 	background-color: #ccc;

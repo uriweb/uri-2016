@@ -12,7 +12,7 @@ Theme Name: uri2016
 }
 .front a:link, .front a:visited {
 	color: $link-color;
-	transition: color 150ms cubic-bezier(.3, .6, .6, 1);
+	@include fade(color);
 }
 .front a:hover {
 	color: $dark-tint;
