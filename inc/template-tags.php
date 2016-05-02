@@ -7,7 +7,6 @@
  * @package uri2016
  */
 
-if ( ! function_exists( 'uri2016_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
@@ -31,17 +30,21 @@ function uri2016_posted_on() {
 	$posted_on = sprintf(
 		esc_html_x( 'Posted on %s', 'post date', 'uri2016' ), $time_string );
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'uri2016' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+// 	$byline = sprintf(
+// 		esc_html_x( 'by %s', 'post author', 'uri2016' ),
+// 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+// 	);
+	
+	$output = '<span class="posted-on">' . $posted_on . '</span>';
+	if(!empty($byline)) {
+		$output .= '<span class="byline"> ' . $byline . '</span>';
+	}
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo $output; // WPCS: XSS OK.
 
 }
-endif;
 
-if ( ! function_exists( 'uri2016_entry_footer' ) ) :
+
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
@@ -79,7 +82,7 @@ function uri2016_entry_footer() {
 		'</span>'
 	);
 }
-endif;
+
 
 /**
  * Returns true if a blog has more than 1 category.
@@ -172,4 +175,30 @@ function uri2016_post_navigation(){
 	}
 
 	echo $navigation;
+}
+
+
+
+function uri2016_get_media_contacts($post){
+	$media_contact_ids = get_field( 'media_contact', $post->ID);
+	if(is_numeric($media_contact_ids)) {
+		$media_contact_ids = array($media_contact_ids);
+	}
+	$media_contacts = array();
+	if( ! empty( $media_contact_ids ) ) {
+		foreach($media_contact_ids as $id) {
+			$media_contacts[] = array(
+				'name' => get_the_title( $id ),
+				'telephone' => get_field( 'last_name', $id ),
+				'telephone' => get_field( 'telephone', $id ),
+				'email' => get_field( 'email', $id )
+			);
+		}
+	}
+	
+	if(!empty($media_contacts)) {
+		return $media_contacts;
+	} else {
+		return FALSE;
+	}
 }

@@ -20,25 +20,24 @@ object {
 
 div.lead-art {
 	margin-top: 1em;
+	max-width: 620px;
+	width: 100%;
 }
 
 .inline-media,
 .simplePullQuote {
-	float: right;
-	margin-left: 16px !important;
-	max-width: 620px;
-	width: 100%;
+	max-width: 100%;
+	img {
+		display: block;
+	}
 }
-.inline-media img {
-	display: block;
-}
+
 .single .inline-media,
 .single .simplePullQuote,
 figure.alignright {
-	float: right;
-	margin-left: 16px !important;
-	margin-right: -384px !important;
+	@extend .hanging-right;
 }
+
 .simplePullQuote {
 	box-shadow: none !important;
 	border: 6px solid $accent !important;

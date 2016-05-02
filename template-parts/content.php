@@ -7,6 +7,11 @@
  * @package uri2016
  */
 
+
+	$show_media_box = TRUE;
+
+	$media_contacts = uri2016_get_media_contacts($post);
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -23,19 +28,61 @@
 
 	<div class="entry-content">
 		<?php
-				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				?>
-					<div class="lead-art inline-media">
-						<figure>
-						<?php the_post_thumbnail(); ?>
-						<?php if ( is_single() ): ?>
-						<figcaption><?php uri2016_thumbnail_caption($post); ?></figcpation>
-						<?php endif; ?>
-						</figure>
-					</div>
 
+			// show the lead art
+
+			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+			?>
+				<div class="lead-art inline-media">
+					<figure>
+					<?php the_post_thumbnail(array(1200, NULL)); ?>
+					<?php if ( is_single() ): ?>
+					<figcaption><?php uri2016_thumbnail_caption($post); ?></figcpation>
+					<?php endif; ?>
+					</figure>
+				</div>
+
+			<?php
+			}
+
+
+			// show the media contact / journalists' box
+			if($show_media_box):
+			?>
+			
+			<aside class="media-contact">
+				<h1>Media</h1>
+				<?php if(is_array($media_contacts)): ?>
+					<h2>Media Contact<?php print (count($media_contacts) == 1) ? '' : 's'; ?>:</h2>
+					<?php foreach($media_contacts as $c): ?>
+						<span class="media-name"><a href="mailto:<?php print $c['email']; ?>"><?php print $c['name']; ?></a></span><br />
+						<?php print $c['telephone']; ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
+				
+				
 				<?php
-				}
+					$thumbnail = get_post_thumbnail_id();
+					if( ! empty ( $thumbnail ) ) : 
+				?>
+					
+				<h2>High Resolution Media:</h2>
+				<p><?php
+					$original_art = wp_get_attachment_image_src( $thumbnail, 'original' );
+					if ( ! empty( $original_art[0] ) ) {
+						printf( '<a href="%1$s" alt="%2$s">%3$s</a>', esc_url( $original_art[0] ), '', get_the_post_thumbnail($post, array(100, NULL)) );
+					}
+				?></p>
+				
+				<?php endif; ?>
+				
+				<p><?php uri2016_posted_on(); ?></p>
+			</aside>
+			
+			<?php
+			endif; // end if show media box
+
+
 
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -53,39 +100,23 @@
 	<footer class="entry-footer">
 		<?php
 		if ( 'post' === get_post_type() && is_single() ) : ?>
-		<div class="entry-meta">
-			<?php uri2016_posted_on(); ?>
-			<?php
-				$media_contact_ids = get_field( 'media_contact' );
-				$media_contacts = array();
-				if( is_array( $media_contact_ids ) && !empty( $media_contact_ids ) ) {
-					foreach($media_contact_ids as $id) {
-						$media_contacts[] = array(
-							'name' => get_the_title( $id ),
-							'telephone' => get_field( 'last_name', $id ),
-							'telephone' => get_field( 'telephone', $id ),
-							'email' => get_field( 'email', $id )
-						);
-					}
-					?>
-				<div class="media-contact">
-					<h4>Media Contact<?php print (count($media_contacts) == 1) ? '' : 's'; ?>:</h4>
-					<?php foreach($media_contacts as $c): ?>
-						<?php print $c['name']; ?> | 
-						<a href="mailto:<?php print $c['email']; ?>"><?php print $c['email']; ?></a> | 
-						<?php print $c['telephone']; ?>
-					<?php endforeach; ?>
-				</div>
-				<?php
-				}
-				?>
+		<div class="entry-meta">			
+			<div class="end-of-article-call">
+				<h4>Next:</h4>
+				<p><?php previous_post_link( '<div class="previous">%link</div>', '%title', true ); ?></p>
+				<p><a href="https://securelb.imodules.com/s/1638/03-Foundation/interior-hybrid.aspx?sid=1638&gid=3&pgid=770&cid=2270">Support the University of Rhode Island</a>.</p>
+			</div>
 
-			
+			<?php
+				uri2016_posted_on();
+			?>
 			
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-		<?php uri2016_entry_footer(); ?>
+		<?php
+			//uri2016_entry_footer();
+		?>
 	</footer><!-- .entry-footer -->
 	
 </article><!-- #post-## -->

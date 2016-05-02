@@ -4,3 +4,9 @@
 @mixin fade($property) {
 	transition: $property 150ms cubic-bezier(.3, .6, .6, 1);
 }
+
+.hanging-right {
+	clear: both;
+	float: right;
+	margin: 1rem -384px 2rem 16px !important;
+}
