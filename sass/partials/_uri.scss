@@ -60,7 +60,7 @@
 .site-header {
 	background-position: 50% 0;
 	background-repeat: no-repeat;
-	/*background-size: 100%;*/
+	background-size: cover;
 	margin-bottom: 2em;
 	position: relative;
 }
@@ -145,6 +145,16 @@ aside.media-contact {
 	h2 {
 		font-size: 18px;
 		margin-bottom: 0;
+	}
+	.media-thumbnails {
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			list-style: none;
+			margin: .25em;
+			padding: 0;
+		}
 	}
 }
 

@@ -19,6 +19,10 @@ Theme Name: uri2016
 	text-decoration: none;
 }
 
+.region-front .widget {
+	padding-bottom: 2rem;
+}
+
 .front .news .primary {
 	margin-bottom: 1em;
 }
@@ -149,6 +153,9 @@ Theme Name: uri2016
 
 /** EVENTS **/
 
+.front #lw {
+	background-color: transparent;
+}
 .front ul#lwe {
 	column-count: 2;
 }
@@ -176,6 +183,49 @@ Theme Name: uri2016
 	float: none;
 }
 
+/** zigzag background **/
+section#text-5, section#shortcode-widget-3 {	
+	background: $light-light-tint;
+	display: block;
+	margin: 3rem -200%;
+	padding: 2rem 0 4rem;
+	position: relative;
+
+	.widget-inner {
+		width: 960px;
+		margin: 0 auto;
+	}
+	
+	&:after {
+		background: linear-gradient(-45deg, $background 16px, transparent 0), linear-gradient(45deg, $background 16px, transparent 0);
+		background-position: bottom;
+		background-repeat: repeat-x;
+		background-size: 32px 32px;
+		content: " ";
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 32px;
+	}
+
+	&:before {
+		background: linear-gradient(-45deg, $light-light-tint 16px, transparent 0), linear-gradient(45deg, $light-light-tint 16px, transparent 0);
+		background-position: bottom;
+		background-repeat: repeat-x;
+		background-size: 32px 32px;
+		content: " ";
+		display: block;
+		position: absolute;
+		top: -32px;
+		left: 0px;
+		width: 100%;
+		height: 32px;
+	}
+
+
+}
 
 /** URI in the News **/
 .front .hungryfeed_items {

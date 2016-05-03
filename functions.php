@@ -111,8 +111,8 @@ function uri2016_widgets_init() {
 		'name'          => 'Front Page',
 		'id'            => 'front',
 		'description'   => esc_html__( 'Add widgets for front page here.', 'uri2016' ),
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+		'after_widget'  => '</div></section>',
 		'before_title'  => '<h2 class="region-front">',
 		'after_title'   => '</h2>',
 	) );

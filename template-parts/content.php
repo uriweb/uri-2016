@@ -31,7 +31,7 @@
 
 			// show the lead art
 
-			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+			if ( has_post_thumbnail() && ! get_post_format( $post->ID ) == 'video') { // check if the post has a Post Thumbnail assigned to it.
 			?>
 				<div class="lead-art inline-media">
 					<figure>
@@ -62,18 +62,21 @@
 				
 				
 				<?php
-					$thumbnail = get_post_thumbnail_id();
-					if( ! empty ( $thumbnail ) ) : 
+					$media = get_attached_media( 'image' );
+					if( ! empty ( $media ) ) : 
 				?>
 					
 				<h2>High Resolution Media:</h2>
-				<p><?php
-					$original_art = wp_get_attachment_image_src( $thumbnail, 'original' );
-					if ( ! empty( $original_art[0] ) ) {
-						printf( '<a href="%1$s" alt="%2$s">%3$s</a>', esc_url( $original_art[0] ), '', get_the_post_thumbnail($post, array(100, NULL)) );
-					}
-				?></p>
-				
+				<ul class="media-thumbnails">
+				<?php foreach($media as $m): ?>
+					<?php
+						$original_art = wp_get_attachment_image_src( $m->ID, 'original' );
+						if ( ! empty( $original_art[0] ) ) {
+							printf( '<li><a href="%1$s" alt="%2$s">%3$s</a></li>', esc_url( $original_art[0] ), '', wp_get_attachment_image($m->ID, array(100, NULL)) );
+						}
+					?>
+				<?php endforeach; ?>
+				</ul>
 				<?php endif; ?>
 				
 				<p><?php uri2016_posted_on(); ?></p>
