@@ -159,14 +159,24 @@ aside.media-contact {
 }
 
 .end-of-article-call {
-	background-color: $light-tint;
+	background-color: $background;
 	font-family: $sans;
 	font-size: 18px;
-	margin: 4rem 0 4rem 25%;
+	margin: 8rem 0 4rem 25%;
+	opacity: 0;
 	padding: 1.5rem 2rem;
+	transform: rotate(10deg);
+	@include fade(all, 500ms);
 	
 	h4 {
 		margin-top: 0;
+	}
+
+	&.shown {
+		margin-top: 4rem;
+		background-color: $light-tint;
+		opacity: 1;
+		transform: rotate(0);
 	}
 	
 }

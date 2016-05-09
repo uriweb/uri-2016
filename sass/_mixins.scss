@@ -1,8 +1,8 @@
 /**
  *  Handles link fades; also happens to handle main menu slide out
  */
-@mixin fade($property) {
-	transition: $property 150ms cubic-bezier(.3, .6, .6, 1);
+@mixin fade($property, $speed:150ms) {
+	transition: $property $speed cubic-bezier(.3, .6, .6, 1);
 }
 
 .hanging-right {
@@ -10,3 +10,44 @@
 	float: right;
 	margin: 1rem -384px 2rem 16px !important;
 }
+
+
+/**
+ * Currently set up with three breakpoints: 480, 720, 960
+ * http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32#variables-in-queries-using-content
+ *
+ */
+//$break-x-small: 320px;
+$break-small: 480px;
+$break-medium: 720px;
+$break-large: 960px;
+
+@mixin device($media) {
+
+	@if $media == phone {
+		@media only screen and (max-width: $break-small) {
+			@content
+		}
+	}
+	
+	@else if $media == bigphone {
+		@media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) {
+			@content
+		}
+	}
+	
+	@else if $media == tablet {
+		@media only screen and (min-width: $break-medium) and (max-width: $break-large - 1) {
+			@content
+		}
+	}
+
+	@else if $media == desktop {
+		@media only screen and (min-width: $break-large) {
+			@content
+		}
+	}
+	
+}
+
+// usage: @include device(bigphone) { width: 100% ;}
