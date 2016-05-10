@@ -11,6 +11,22 @@
 	padding: 0;
 }
 
+#page .entry-content figure {
+	@include device(phone) {
+		width: 100% !important;
+	}
+	@include device(bigphone) {
+		.entry-content figure {
+			width: 100% !important;
+		}
+	}
+	img {
+		width: 100% !important;
+	}
+}
+
+
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
