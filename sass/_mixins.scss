@@ -1,18 +1,4 @@
 /**
- *  Handles link fades; also happens to handle main menu slide out
- */
-@mixin fade($property, $speed:150ms) {
-	transition: $property $speed cubic-bezier(.3, .6, .6, 1);
-}
-
-.hanging-right {
-	clear: both;
-	float: right;
-	margin: 1rem -384px 2rem 16px !important;
-}
-
-
-/**
  * Currently set up with three breakpoints: 480, 720, 960
  * http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32#variables-in-queries-using-content
  *
@@ -51,3 +37,23 @@ $break-large: 960px;
 }
 
 // usage: @include device(bigphone) { width: 100% ;}
+
+/**
+ *  Handles link fades; also happens to handle main menu slide out
+ */
+@mixin fade($property, $speed:150ms) {
+	transition: $property $speed cubic-bezier(.3, .6, .6, 1);
+}
+
+.hanging-right {
+	clear: both;
+	float: right;
+	margin: 1rem -24rem 2rem 1rem !important;
+	@include device(phone) {
+		float: none !important;
+		margin: .5em -.5em !important;
+		width: auto !important;
+	}
+}
+
+

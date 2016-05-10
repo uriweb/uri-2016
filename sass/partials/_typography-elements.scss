@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+
 body,
 button,
 input,
@@ -8,7 +9,7 @@ select,
 textarea {
 	color: #404040;
 	font-family: $serif;
-	font-size: 16px;
+	font-size: 1em;
 	font-size: 1rem;
 	line-height: 1.5;
 }

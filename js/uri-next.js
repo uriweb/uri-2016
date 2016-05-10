@@ -5,12 +5,16 @@
  */
 
 window.addEventListener("load", function() {
-	document.getElementById("uri-next").className += " hidden";
+	var el = document.getElementById("uri-next");
+	if(el == null) {
+		return;
+	}
+	window.addEventListener("scroll", function() {
+		nextOnScreen();
+	}, false);
+	el.className += " hidden";
 }, false);
 
-window.addEventListener("scroll", function() {
-	nextOnScreen();
-}, false);
 
 function nextOnScreen() {
 	var el = document.getElementById("uri-next");

@@ -68,11 +68,11 @@ article.post {
 	width: 100%;
 }
 .entry-title {
-	font: 600 28px/1.5 $trajan;
+	font: 600 1.75rem/1.5 $trajan;
 	margin-bottom: 1em;
 }
 .entry-content {
-	max-width: 620px;
+	max-width: 38.75rem;
 }
 .entry-footer {
 	margin-bottom: 3em;
@@ -99,16 +99,26 @@ article.post {
 	padding: 1em 0 !important;
 }
 #lw .lwn {
-	font-size: 20px;
+	font-size: 1.25rem;
 	margin-bottom: .5em;
 }
 #lw .lwd {
 	font-family: $serif;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.5rem;
 }
 #lw .lwl {
-	font-size: 16px;
+	font-size: 1rem;
 }
 
+
+/*--------------------------------------------------------------
+## URI in the News feed items
+--------------------------------------------------------------*/
+.hungryfeed_item {
+	font-family: $sans;
+	a {
+		font-weight: 700;
+	}
+}
 

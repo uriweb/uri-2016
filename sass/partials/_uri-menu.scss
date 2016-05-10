@@ -15,6 +15,11 @@ Theme Name: uri2016
 	//transition: all 200ms cubic-bezier(1, 0, 1, 1);
 	z-index: 100;
 
+	@include device(phone) {
+		top: -350px;
+		width: 100%;
+	}
+
 	a:link,
 	a:visited {
 		color: $dark-tint;
@@ -44,6 +49,9 @@ Theme Name: uri2016
 	ul { // top level list
 		margin: 0 0 0 -10px;
 		padding: 0;
+		@include device(phone) {
+			background-color: $accent-light;
+		}
 		li {
 			background-color: $accent;
 			list-style: none;
@@ -51,6 +59,12 @@ Theme Name: uri2016
 			margin: 0;
 			padding: 0 10px 0 25px;
 			width: 230px;
+			@include device(phone) {
+				line-height: 1.5;
+				padding: .25em 1em;
+				width: 100%;
+			}
+
 			&:hover {
 				background-color: $accent-light;
 				.sub-nav {
@@ -66,6 +80,15 @@ Theme Name: uri2016
 				position: absolute;
 				width: 730px;
 				top: 0;
+				@include device(phone) {
+					background-color: $accent-light;
+					font-weight: 400;
+					font-size: .75em;
+					padding: .25em 1em;
+					position: relative;
+					width: 100%;
+					left: 0;
+				}
 			}
 			ul { // sub lists
 				column-count: 2;
@@ -86,12 +109,18 @@ Theme Name: uri2016
 	bottom: 0;
 	margin-left: 15px;
 	position: absolute;
+	@include device(phone) {
+		display: none;
+	}
 }
 
 .nav-figure {
 	position: absolute;
 	right: 0;
 	top: 2em;
+	@include device(phone) {
+		display: none;
+	}
 }
 
 .logged-in #nav{

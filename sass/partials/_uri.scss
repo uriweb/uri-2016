@@ -8,6 +8,9 @@
 	height: 158px;
 	padding-top: 1.75em;
 	overflow: visible;
+	@include device(phone) {
+		height: 8em;
+	}
 }
 .uri-branding h1 {
 	line-height: 0;
@@ -17,14 +20,16 @@
 	/*background: transparent url(img/uri-logo.svg) 0 0 no-repeat;*/
 	color: $accent;
 	display: block;
-	height: 89px;
-	/* text-indent: -999em; */
-	width: 209px;
 }
 
 #logo {
-	font: 500 18px $trajan;
+	display: block;
+	font: 500 1.125rem $trajan;
 	text-transform: uppercase;
+	@include device(phone) {
+		font-size: 14px;
+		margin-left: 10%;
+	}
 }
 #logo span {
 	display: block;
@@ -35,15 +40,18 @@
 	margin-bottom: -.375rem;
 }
 #logo .university {
-	font-size: 30px;
+	font-size: 1.875rem;
 	margin-bottom: -.3rem;
+	@include device(phone) {
+		font-size: 23.5px;
+	}
 }
 #logo b {
 	font-weight: inherit;
 	@include fade(color);
 }
 .uri-branding h1 a:hover b {
-	color: #f0e7B9;
+	color: $light-light-tint;
 }
 
 .think-big-we-do {
@@ -51,11 +59,17 @@
 	background-size: contain;
 	float: right;
 	height: 87px;
-	margin-top: -41px;
+	margin-top: -40px;
 	position: relative;
 	text-indent: -999em;
 	width: 202px;
 	z-index: 91;
+	@include device(phone) {
+		display: none;
+	}
+	@include device(bigphone) {
+		background-size: 75%;
+	}
 }
 .site-header {
 	background-position: 50% 0;
@@ -63,21 +77,29 @@
 	background-size: cover;
 	margin-bottom: 2em;
 	position: relative;
+	@include device(phone) {
+		.site {
+			padding: 0;
+		}
+	}
 }
 .site-branding {
 	background: transparent url(img/black30.png) 0 0 repeat;
-	bottom: 60px;
+	bottom: 4rem;
 	padding: 1em 4em;
 	position: absolute;
 	z-index: 90;
+	@include device(phone) {
+		padding: 1em;
+	}
 }
 .site-title, .site-description {
 	margin: 0;
 	/* color | offset-x | offset-y | blur-radius */
-	text-shadow: #000 2px 1px 0;
+	text-shadow: #000 .125rem .0625rem 0;
 }
 .site-title {
-	font: 500 48px/1.2 $trajan;
+	font: 500 3rem/1.2 $trajan;
 }
 .site-title a:link {
 	text-decoration: none;
@@ -89,16 +111,20 @@
 	text-decoration: underline;
 }
 .site-description {
-	font: 600 18px/1.5 $sans;
+	font: 600 1.2rem/1.5 $sans;
 }
 .search-wrapper {
 	clear: right;
 	float: right;
-	margin-top: -180px;
+	margin-top: -11.5rem;
 	text-align: right;
+	@include device(phone) {
+		display: none;
+	}
 }
 .search-wrapper label {
-	margin-right: -4px;
+	margin-right: -.25em;
+	float: left;
 }
 .search-wrapper input {
 	height: 2.25rem;
@@ -108,7 +134,7 @@
 .search-wrapper input.search-field {
 	border: 0;
 	border-radius: 0;
-	font: 600 18px/1.5 $sans;
+	font: 600 1.2rem/1.5 $sans;
 	-webkit-appearance: textfield;
 }
 .search-wrapper input.search-submit:hover {
@@ -137,13 +163,18 @@ aside.media-contact {
 	@extend .hanging-right;
 	background-color: $light-tint;
 	padding: 0 1.5rem 2rem;
-	width: 310px;
+	width: 19rem;
+	@include device(phone) {
+		float: right !important;
+		margin: 1em .5em !important;
+		width: 50% !important;
+	}
 	h1 {
-		font-size: 28px;
+		font-size: 1.75rem;
 		text-align: center;
 	}
 	h2 {
-		font-size: 18px;
+		font-size: 1.2rem;
 		margin-bottom: 0;
 	}
 	.media-thumbnails {
@@ -161,13 +192,20 @@ aside.media-contact {
 .end-of-article-call {
 	background-color: $background;
 	font-family: $sans;
-	font-size: 18px;
+	font-size: 1.2rem;
 	margin: 8rem 0 4rem 25%;
 	opacity: 0;
 	padding: 1.5rem 2rem;
 	transform: rotate(10deg);
 	@include fade(all, 500ms);
-	
+
+	@include device(phone) {
+		margin: 0 0 1.5em;
+		background-color: $light-tint;
+		opacity: 1;
+		transform: rotate(0);
+	}
+
 	h4 {
 		margin-top: 0;
 	}
@@ -177,6 +215,9 @@ aside.media-contact {
 		background-color: $light-tint;
 		opacity: 1;
 		transform: rotate(0);
+		@include device(phone) {
+			margin: 0 0 1.5em;
+		}
 	}
 	
 }
@@ -199,7 +240,7 @@ aside.media-contact {
 .internal {
 	background: transparent url(img/lock.svg) 0 50% no-repeat;
 	float: right;
-	padding-left: 20px !important;
+	padding-left: 1.375rem !important;
 }
 .tactical li, .internal li {
 	display: inline;
