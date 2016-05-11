@@ -19,6 +19,10 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,900|Source+Sans+Pro:400,700") all;
 
 
+html {
+	font-size: 16px;
+}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -73,6 +77,10 @@ article.post {
 }
 .entry-content {
 	max-width: 38.75rem;
+	line-height: 1.625;
+	@include device(tablet) {
+		max-width: 100%;
+	}
 }
 .entry-footer {
 	margin-bottom: 3em;

@@ -54,6 +54,11 @@ $break-large: 960px;
 		margin: .5em -.5em !important;
 		width: auto !important;
 	}
+	@include device(tablet) {
+		float: right;
+		margin: 1rem !important;
+		width: auto !important;
+	}
 }
 
 

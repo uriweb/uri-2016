@@ -7,14 +7,20 @@
  * @package uri2016
  */
 
+	$additional_classes = array();
 
-	$show_media_box = TRUE;
+	if(is_single()) {
+		$show_media_box = TRUE;
+	} else {
+		$additional_classes[] = 'excerpt';
+		$show_media_box = FALSE;
+	}
 
 	$media_contacts = uri2016_get_media_contacts($post);
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $additional_classes ); ?>>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -30,12 +36,14 @@
 		<?php
 
 			// show the lead art
-
 			if ( has_post_thumbnail() && ! get_post_format( $post->ID ) == 'video') { // check if the post has a Post Thumbnail assigned to it.
 			?>
 				<div class="lead-art inline-media">
 					<figure>
-					<?php the_post_thumbnail(array(1200, NULL)); ?>
+					<?php
+						$width = ( is_single() ) ? 1200 : 400 ;
+						the_post_thumbnail(array($width, NULL));
+					?>
 					<?php if ( is_single() ): ?>
 					<figcaption><?php uri2016_thumbnail_caption($post); ?></figcpation>
 					<?php endif; ?>
