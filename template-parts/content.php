@@ -8,12 +8,13 @@
  */
 
 	$additional_classes = array();
-
-	if(is_single()) {
-		$show_media_box = TRUE;
-	} else {
+	$show_media_box = FALSE;
+	if( ! is_single() ) {
 		$additional_classes[] = 'excerpt';
-		$show_media_box = FALSE;
+	}
+	
+	if( ! empty( get_field( 'show_the_media_box', $post->ID ) )) {
+		$show_media_box = TRUE;
 	}
 
 	$media_contacts = uri2016_get_media_contacts($post);
@@ -47,6 +48,16 @@
 					<?php if ( is_single() ): ?>
 					<figcaption><?php uri2016_thumbnail_caption($post); ?></figcpation>
 					<?php endif; ?>
+					</figure>
+				</div>
+
+			<?php
+			}
+			if (get_post_format( $post->ID ) == 'video') { // check if the post is a video
+			?>
+				<div class="lead-video">
+					<figure>
+					<?php print get_field( 'embed_code', $post->ID ); ?>
 					</figure>
 				</div>
 

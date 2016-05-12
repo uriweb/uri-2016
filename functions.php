@@ -64,11 +64,11 @@ function uri2016_setup() {
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
+//		'aside',
+//		'image',
 		'video',
-		'quote',
-		'link',
+//		'quote',
+//		'link',
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -173,6 +173,15 @@ function uri2016_experts_page($query) {
 }
 add_action( 'pre_get_posts', 'uri2016_experts_page');
 
+
+function uri2016_custom_admin_styles() {
+  echo '<style>
+    .wp-admin .field textarea {
+      min-height: 0;
+    } 
+  </style>';
+}
+add_action('admin_head', 'uri2016_custom_admin_styles');
 
 /**
  * Implement the Custom Header feature.

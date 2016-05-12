@@ -51,7 +51,7 @@
 	@include fade(color);
 }
 .uri-branding h1 a:hover b {
-	color: $light-light-tint;
+	color: $accent-light;
 }
 
 .think-big-we-do {
@@ -161,6 +161,7 @@
 
 aside.media-contact {
 	@extend .hanging-right;
+	margin-right: -21.25rem !important;
 	background-color: $light-tint;
 	padding: 0 1.5rem 2rem;
 	width: 19rem;
