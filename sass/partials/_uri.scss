@@ -146,8 +146,8 @@
 }
 
 .read-more {
-	display: inline-block;
-	margin-bottom: 1em;
+// 	display: inline-block;
+// 	margin-bottom: 1em;
 }
 .media-contact {
 	margin-bottom: 2em;
@@ -157,6 +157,11 @@
 }
 .media-name {
 	white-space: nowrap;
+}
+
+.expertise {
+	margin-top: 1em;
+	padding-top: 1em;
 }
 
 aside.media-contact {

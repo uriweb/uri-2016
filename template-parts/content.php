@@ -13,9 +13,11 @@
 		$additional_classes[] = 'excerpt';
 	}
 	
-	if( ! empty( get_field( 'show_the_media_box', $post->ID ) )) {
+	if( ! empty( get_field( 'show_the_media_box', $post->ID ) ) && is_single() ) {
 		$show_media_box = TRUE;
 	}
+	
+	$is_expert = ( in_array( 'category-experts', get_post_class($post->ID) ) );
 
 	$media_contacts = uri2016_get_media_contacts($post);
 
@@ -45,8 +47,11 @@
 						$width = ( is_single() ) ? 1200 : 400 ;
 						the_post_thumbnail(array($width, NULL));
 					?>
-					<?php if ( is_single() ): ?>
-					<figcaption><?php uri2016_thumbnail_caption($post); ?></figcpation>
+					<?php
+					$figcaption = uri2016_get_thumbnail_caption($post);
+					if ( is_single() && !empty( $figcaption ) ):
+					?>
+					<figcaption><?php print $figcaption; ?></figcpation>
 					<?php endif; ?>
 					</figure>
 				</div>
@@ -105,18 +110,73 @@
 			endif; // end if show media box
 
 
+			if( $is_expert && is_single() ) {
+				$position = get_field( 'position', $post->ID );
+				$telephone = get_field( 'telephone', $post->ID );
+				$email = get_field( 'email', $post->ID );
+				$links = get_field( 'links', $post->ID );
+				?>
+					<dl class="experts-details">
 
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'uri2016' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+						<dt>Title</dt>
+						<dd><?php print $position; ?></dd>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uri2016' ),
-				'after'  => '</div>',
-			) );
+						<dt>Telephone</dt>
+						<dd><?php print $telephone; ?></dd>
+
+						<dt>Email</dt>
+						<dd><a href="mailto:<?php print $email; ?>"><?php print $email; ?></a></dd>
+
+						<dt>Links</dt>
+						<dd><?php
+							$links = preg_split('/\s+/', strip_tags($links)); 
+							foreach( $links as $l ) {
+								$url = trim($l);
+								print '<a href="' . $url . '">' . url_shorten($url, 60) . '</a><br />';
+							}
+						?>
+						</dd>
+
+					</dl>
+				<?php
+			}
+
+			if( is_single() ) {
+
+				the_content( sprintf(
+					/* translators: %s: Name of current post. */
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'uri2016' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				) );
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uri2016' ),
+					'after'  => '</div>',
+				) );
+
+			} else {
+					$content = get_the_content();
+					$content = strip_tags($content, '<a><strong><em><p><div>');
+					$content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 		
+					$content = preg_replace("/<iframe[^>]+\>/i", "(video) ", $content);             
+					$content = apply_filters('the_content', $content);
+					$content = str_replace(']]>', ']]>', $content);
+					echo $content;
+
+			}
 		?>
+		<?php
+			if( $is_expert ) {
+				$tags = get_the_tags();
+				$tags_output = array();
+				if ($tags) {
+					foreach($tags as $tag) {
+						$tags_output[] = $tag->name;
+					}
+					print '<div class="expertise">Areas of expertise: ' . implode( ', ', $tags_output) . '</div>';
+				}
+			}
+		?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

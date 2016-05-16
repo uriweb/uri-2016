@@ -6,7 +6,7 @@
 
 window.addEventListener("load", function() {
 	var el = document.getElementById("uri-next");
-	if(el == null) {
+	if(el === null) {
 		return;
 	}
 	window.addEventListener("scroll", function() {

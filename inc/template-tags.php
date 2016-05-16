@@ -59,10 +59,7 @@ function uri2016_entry_footer() {
 // 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'uri2016' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'uri2016' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-		}
+		print uri2016_tag_list();
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -83,6 +80,13 @@ function uri2016_entry_footer() {
 	);
 }
 
+function uri2016_tag_list() {
+	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'uri2016' ) );
+	if ( $tags_list ) {
+		return sprintf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'uri2016' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+	}
+	return '';
+}
 
 /**
  * Returns true if a blog has more than 1 category.
@@ -148,6 +152,13 @@ function uri2016_media_contact($post) {
  * Print the featured image caption
  */
 function uri2016_thumbnail_caption($post) {
+  echo uri2016_get_thumbnail_caption();
+}
+
+/**
+ * Get the featured image caption
+ */
+function uri2016_get_thumbnail_caption($post) {
 	if( empty( $post ) ) {
 		return FALSE;
 	}
@@ -156,8 +167,9 @@ function uri2016_thumbnail_caption($post) {
   $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
 
   if ($thumbnail_image && isset($thumbnail_image[0])) {
-    echo nl2br($thumbnail_image[0]->post_excerpt);
+    return nl2br($thumbnail_image[0]->post_excerpt);
   }
+  return '';
 }
 
 
