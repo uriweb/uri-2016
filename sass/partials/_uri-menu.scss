@@ -22,11 +22,19 @@ Theme Name: uri2016
 
 	a:link,
 	a:visited {
-		color: $dark-tint;
+		color: $link-color;
 		text-decoration: underline;
 	}
 	a:hover {
+		color: $dark-tint;
+		text-decoration: none;
+	}
+	.nav-feature a:link,
+	.nav-feature a:visited {
 		color: $link-color;
+	}
+	.nav-feature a:hover {
+		color: $dark-tint;
 	}
 	
 	.uri>a {
@@ -80,9 +88,9 @@ Theme Name: uri2016
 				position: absolute;
 				width: 730px;
 				top: 0;
+				font-weight: 400;
 				@include device(phone) {
 					background-color: $accent-light;
-					font-weight: 400;
 					font-size: .75em;
 					padding: .25em 1em;
 					position: relative;
@@ -116,7 +124,7 @@ Theme Name: uri2016
 
 .nav-figure {
 	position: absolute;
-	right: 0;
+	right: 2em;
 	top: 2em;
 	@include device(phone) {
 		display: none;

@@ -30,7 +30,8 @@ a:active {
 
 // note: article was .entry-content so that "highlighter" links were only in body copy and not headlines
 
-article a, article a:link {
+.entry-content a, 
+.entry-content a:link {
 	/* WIRED has the coolest link styles */
 	color: $link-color;
 	color: inherit;
@@ -39,13 +40,13 @@ article a, article a:link {
 	text-decoration: none;
 	@include fade(background);
 }
-article a:visited {
+.entry-content a:visited {
 	color: $dark-tint;
 }
 
-article a:hover,
-article a:focus,
-article a:active {
+.entry-content a:hover,
+.entry-content a:focus,
+.entry-content a:active {
 	background-color: $medium-light-tint;
 	box-shadow: inset 0 -4px 0 $medium-light-tint;
 	color: inherit;
