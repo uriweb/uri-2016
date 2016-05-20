@@ -42,7 +42,6 @@ function uri2016_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	$tint = get_theme_mod('header_text_tint');
-	
 	/*
 	 * If no custom options for text are set, let's bail.
 	 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: HEADER_TEXTCOLOR.
@@ -54,6 +53,11 @@ function uri2016_header_style() {
 	// If we get this far, we have custom styles. Let's do this.
 	?>
 	<style type="text/css">
+
+		.site-header {
+				background-color: <?php print get_theme_mod('header_bg_color'); ?>;
+		}
+
 	<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :

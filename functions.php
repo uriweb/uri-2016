@@ -126,7 +126,7 @@ function uri2016_scripts() {
 	$theme = get_template_directory_uri();
 
 
-	wp_register_script( 'wp_environment');
+	wp_register_script( 'wp_environment', null);
 	wp_enqueue_script( 'wp_environment' );
 	$data = array(
 		'theme_url' => $theme

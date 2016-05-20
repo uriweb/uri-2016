@@ -14,7 +14,33 @@ function uri2016_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	
+	// rename "Header Image" section to "Header"
+	$wp_customize->get_section('header_image')->title = esc_html__( 'Header', 'uri2016' );
 
+	// header background color
+	$wp_customize->add_setting( 'header_bg_color', array(
+		'default' => '#aad1ff',
+		'sanitize_callback' => 'sanitize_hex_color',
+ 		'type' => 'theme_mod',
+ 		'transport' => 'postMessage'
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( 
+		$wp_customize, 
+		'header_bg_color',
+		array(
+			'label'    => __( 'Header Background Color', 'uri2016' ),
+			'description' => __( 'This color is only seen when there is no header image.'),
+			'section'  => 'header_image',
+			'capability' => 'edit_theme_options',
+			'settings' => 'header_bg_color',
+			'priority' => 10,
+		) 
+	));
+	
+
+	// header text tinted background
 	$wp_customize->add_setting( 'header_text_tint', array(
 		'default' => '1',
 		'sanitize_callback' => '',
@@ -32,14 +58,14 @@ function uri2016_customize_register( $wp_customize ) {
 			'capability' => 'edit_theme_options',
 	 		'type' => 'checkbox',
 			'settings' => 'header_text_tint',
-			'priority' => 10,
+			'priority' => 20,
 			'input_attrs' => array(
 				'checked' => ''
 			)
 		) 
 	));
+
 	
-	//$wp_customize->get_setting( 'header_text_tint' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'uri2016_customize_register' );
 
