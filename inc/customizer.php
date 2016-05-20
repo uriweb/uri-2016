@@ -14,6 +14,32 @@ function uri2016_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	$wp_customize->add_setting( 'header_text_tint', array(
+		'default' => '1',
+		'sanitize_callback' => '',
+ 		'type' => 'theme_mod',
+ 		'transport' => 'postMessage'
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'header_text_tint',
+		array(
+			'label'    => __( 'Tint the Header Text Background', 'uri2016' ),
+			'description' => __( 'Darkens the area around header text.'),
+			'section'  => 'header_image',
+			'capability' => 'edit_theme_options',
+	 		'type' => 'checkbox',
+			'settings' => 'header_text_tint',
+			'priority' => 10,
+			'input_attrs' => array(
+				'checked' => ''
+			)
+		) 
+	));
+	
+	//$wp_customize->get_setting( 'header_text_tint' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'uri2016_customize_register' );
 

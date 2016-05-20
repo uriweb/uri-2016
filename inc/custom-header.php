@@ -41,6 +41,8 @@ if ( ! function_exists( 'uri2016_header_style' ) ) :
 function uri2016_header_style() {
 	$header_text_color = get_header_textcolor();
 
+	$tint = get_theme_mod('header_text_tint');
+	
 	/*
 	 * If no custom options for text are set, let's bail.
 	 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: HEADER_TEXTCOLOR.
@@ -70,6 +72,13 @@ function uri2016_header_style() {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>
+	
+	<?php if ( $tint ): ?>
+		.site-branding {
+				background-image: url(<?php print get_template_directory_uri(); ?>/img/black30.png);
+		}
+	<?php endif; ?>
+	
 	</style>
 	<?php
 }

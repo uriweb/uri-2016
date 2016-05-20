@@ -60,7 +60,7 @@ html {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
 }
 
 .page-links {
@@ -72,8 +72,8 @@ article.post {
 	width: 100%;
 }
 .entry-title {
-	font: 600 1.75rem/1.5 $trajan;
-	margin-bottom: 1em;
+	font: 600 2rem/1.5 $sans;
+	margin-bottom: .25em;
 }
 .entry-content {
 	max-width: 38.75rem;

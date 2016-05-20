@@ -133,12 +133,18 @@ Theme Name: uri2016
 
 .logged-in #nav{
 	top: -288px;
+	@include device(phone) {
+		top: -350px;
+	}
 }
 #nav.open {
 	top: 0;
 }
 .logged-in #nav.open {
 	top: 32px;
+	@include device(phone) {
+		top: 0;
+	}
 }
 
 

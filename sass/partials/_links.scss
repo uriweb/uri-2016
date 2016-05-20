@@ -30,27 +30,32 @@ a:active {
 
 // note: article was .entry-content so that "highlighter" links were only in body copy and not headlines
 
-.entry-content a, 
-.entry-content a:link {
-	/* WIRED has the coolest link styles */
-	color: $link-color;
-	color: inherit;
-	border-bottom: 2px solid $medium-light-tint;
-	box-shadow: inset 0 -4px 0 $medium-tint;
+.entry-content a {
 	text-decoration: none;
-	@include fade(background);
-}
-.entry-content a:visited {
-	color: $dark-tint;
+	&:link {
+		/* WIRED has the coolest link styles */
+		color: $link-color;
+		color: inherit;
+		border-bottom: 2px solid $medium-light-tint;
+		box-shadow: inset 0 -4px 0 $medium-tint;
+		text-decoration: none;
+		@include fade(background);
+	}
+	&:visited {
+		border-color: $medium-light-tint;
+		color: $dark-tint;
+		text-decoration: none;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $medium-light-tint;
+		box-shadow: inset 0 -4px 0 $medium-light-tint;
+		color: inherit;
+	}
 }
 
-.entry-content a:hover,
-.entry-content a:focus,
-.entry-content a:active {
-	background-color: $medium-light-tint;
-	box-shadow: inset 0 -4px 0 $medium-light-tint;
-	color: inherit;
-}
+
  
 
 .uri-branding a, #nav a, .main-navigation a, #wpadminbar a {

@@ -39,4 +39,15 @@
 			}
 		} );
 	} );
+
+	wp.customize( 'header_text_tint', function( value ) {
+		value.bind( function( to ) {
+			var src = ( to ) ? 'url(' + wordpress_environment.theme_url + '/img/black30.png)' : 'none';
+			$( '.site-branding' ).css( {
+				backgroundImage : src
+			} );
+		} );
+	} );
+	
+	
 } )( jQuery );

@@ -190,8 +190,20 @@
 			</div>
 
 			<?php
-				uri2016_posted_on();
+
+			// show the media contact in the footer... should this be conditional?
+			if( ! $show_media_box && is_array( $media_contacts ) ):
 			?>
+			
+					<h2>Media Contact<?php print (count($media_contacts) == 1) ? '' : 's'; ?>:</h2>
+					<?php foreach($media_contacts as $c): ?>
+						<span class="media-name"><a href="mailto:<?php print $c['email']; ?>"><?php print $c['name']; ?></a></span><br />
+						<?php print $c['telephone']; ?><br />
+					<?php endforeach; ?>
+				<?php 
+					endif;
+					uri2016_posted_on();
+				?>
 			
 		</div><!-- .entry-meta -->
 		<?php

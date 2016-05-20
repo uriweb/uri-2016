@@ -72,11 +72,16 @@
 	}
 }
 .site-header {
+	background-color: $light-tint;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-bottom: 2em;
+	min-height: 200px;
 	position: relative;
+	.nav-wrapper {
+		min-height: 200px;
+	}
 	@include device(phone) {
 		.site {
 			padding: 0;
@@ -84,7 +89,7 @@
 	}
 }
 .site-branding {
-	background: transparent url(img/black30.png) 0 0 repeat;
+	//background: transparent url(img/black30.png) 0 0 repeat;
 	bottom: 4rem;
 	padding: 1em 4em;
 	position: absolute;
@@ -143,6 +148,16 @@
 
 .single .site-main, .home .site-main {
 	margin-right: 0;
+}
+
+.page-header h1 {
+	font-family: $trajan;
+}
+
+.entry-header {
+	h2.entry-title {
+		font-family: $sans;
+	}
 }
 
 .read-more {

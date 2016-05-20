@@ -124,6 +124,19 @@ add_action( 'widgets_init', 'uri2016_widgets_init' );
  */
 function uri2016_scripts() {
 	$theme = get_template_directory_uri();
+
+
+	wp_register_script( 'wp_environment');
+	wp_enqueue_script( 'wp_environment' );
+	$data = array(
+		'theme_url' => $theme
+	);
+	//after wp_enqueue_script
+	wp_localize_script( 'wp_environment', 'wordpress_environment', $data );
+
+
+
+
 	wp_enqueue_style( 'uri2016-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'uri2016-menu', $theme . '/js/uri-menu.js', array(), '20151215', true );
 
@@ -153,6 +166,10 @@ function uri2016_scripts() {
 add_action( 'wp_enqueue_scripts', 'uri2016_scripts' );
 
 
+
+/**
+ * Add inline javascript to enable URI's Typekit package
+ */
 function uri2016_typekit_inline() {
   if ( wp_script_is( 'typekit', 'done' ) ) { ?>
     <script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>
@@ -160,8 +177,19 @@ function uri2016_typekit_inline() {
 }
 add_action( 'wp_head', 'uri2016_typekit_inline' );
 
+/**
+ * Replace footer credits for JetPack Inifite Scroll
+ */
+function uri2016_infinite_scroll_credit() {
+    $content = '';
+    return $content;
+}
+add_filter('infinite_scroll_credit','uri2016_infinite_scroll_credit');
 
-
+/**
+ * Runs a custom query for the experts page
+ * @todo: move this out of the theme and into an experts plugin
+ */
 function uri2016_experts_page($query) {
 	if ( is_category( 'experts' ) && $query->is_main_query() ) {
 		$query->set( 'meta_key', 'sort_name');
@@ -174,6 +202,9 @@ function uri2016_experts_page($query) {
 add_action( 'pre_get_posts', 'uri2016_experts_page');
 
 
+/**
+ * Adds custom css to the admin section so that not all text areas are the same height.
+ */
 function uri2016_custom_admin_styles() {
   echo '<style>
     .wp-admin .field textarea {
@@ -182,6 +213,9 @@ function uri2016_custom_admin_styles() {
   </style>';
 }
 add_action('admin_head', 'uri2016_custom_admin_styles');
+
+
+
 
 /**
  * Implement the Custom Header feature.
