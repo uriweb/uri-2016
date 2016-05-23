@@ -16,6 +16,8 @@ Theme Name: uri2016
 	z-index: 100;
 
 	@include device(phone) {
+		margin-left: -.5em;
+		margin-right: -.5em;
 		top: -350px;
 		width: 100%;
 	}
@@ -161,6 +163,9 @@ Theme Name: uri2016
 		content: " \25BE";
 		display: inline-block;
 		padding: 0 .25em;
+	}
+	@include device(phone) {
+		left: .5em;
 	}
 }
 .open #nav-toggle:after {

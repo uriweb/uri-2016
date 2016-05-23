@@ -27,7 +27,7 @@
 						<li><a href="http://web.uri.edu/about/services/">A-Z</a></li>
 					</ul>
 					<figure class="nav-figure">
-						<a href="#"><img src="<?php print get_template_directory_uri(); ?>/img/nav/green.jpg" alt="" width="238" height="210" /></a>
+						<a href="http://web.uri.edu/admission/quick-facts/"><img src="<?php print get_template_directory_uri(); ?>/img/nav/green.jpg" alt="" width="238" height="210" /></a>
 					</figure>
 					<div class="nav-feature">Read <a href="http://web.uri.edu/admission/quick-facts/">At-a-glance numbers about URI</a>.</div>			
 				</div>
@@ -43,7 +43,7 @@
 						<li><a href="http://web.uri.edu/enrollment/financial-aid/">Financial Aid</a></li>
 					</ul>
 					<figure class="nav-figure">
-						<a href="#"><img src="<?php print get_template_directory_uri(); ?>/img/nav/virtual-tour.jpg" alt="" width="238" height="210" /></a>
+						<a href="http://web.uri.edu/admission/why-uri/"><img src="<?php print get_template_directory_uri(); ?>/img/nav/virtual-tour.jpg" alt="" width="238" height="210" /></a>
 					</figure>
 					<div class="nav-feature">See what sets URI apart: <a href="http://web.uri.edu/admission/why-uri/">Visit Why URI</a>.</div>
 				</div>
@@ -61,7 +61,7 @@
 						<li><a href="http://web.uri.edu/learningonline">Online Learning</a></li>
 					</ul>
 					<figure class="nav-figure">
-						<a href="#"><img src="<?php print get_template_directory_uri(); ?>/img/nav/academics.jpg" alt="" width="238" height="210" /></a>
+						<a href="http://web.uri.edu/advising/majors/"><img src="<?php print get_template_directory_uri(); ?>/img/nav/academics.jpg" alt="" width="238" height="210" /></a>
 					</figure>
 					<div class="nav-feature">Find your major in URI's <a href="http://web.uri.edu/advising/majors/">Undergraduate Programs</a>.</div>
 				</div>
@@ -82,9 +82,9 @@
 						<li><a href="http://www.uri.edu/bookstore/navigate/">Bookstore</a></li>
 					</ul>
 					<figure class="nav-figure">
-						<a href="#"><img src="<?php print get_template_directory_uri(); ?>/img/nav/campus-life.jpg" alt="" width="238" height="210" /></a>
+						<a href="http://www.youvisit.com/tour/uri?loc=trail8:0:1:1&tourid=tour1&pl=v&m_prompt=1"><img src="<?php print get_template_directory_uri(); ?>/img/nav/campus-life.jpg" alt="" width="238" height="210" /></a>
 					</figure>
-					<div class="nav-feature">Experience the Freshman Residence Hall in  360° on our <a href="http://www.youvisit.com/tour/uri?loc=trail8:0:1:1&tourid=tour1&pl=v&m_prompt=1">virtual campus tour</a>.</div>			
+					<div class="nav-feature">Experience one of our residence halls in 360° on our <a href="http://www.youvisit.com/tour/uri?loc=trail8:0:1:1&tourid=tour1&pl=v&m_prompt=1">virtual campus tour</a>.</div>			
 				</div>
 			</li>
 			<li class="parentcat"><a href="ttp://www.gorhody.com">Athletics</a>
@@ -95,7 +95,7 @@
 						<li><a href="http://www.theryancenter.com/">Ryan Center</a></li>
 					</ul>
 					<figure class="nav-figure">
-						<a href="#"><img src="<?php print get_template_directory_uri(); ?>/img/nav/athletics.jpg" alt="" width="238" height="210" /></a>
+						<a href="http://web.uri.edu/campusrec/facilityreservations/"><img src="<?php print get_template_directory_uri(); ?>/img/nav/athletics.jpg" alt="" width="238" height="210" /></a>
 					</figure>
 					<div class="nav-feature">Explore the <a href="http://web.uri.edu/campusrec/facilityreservations/">Atheletic Facilities</a>.</div>
 				</div>
@@ -111,7 +111,7 @@
 						<li><a href="http://web.uri.edu/graduate-school/">Graduate Studies</a></li>
 					</ul>
 					<figure class="nav-figure">
-						<a href="#"><img src="<?php print get_template_directory_uri(); ?>/img/nav/research.jpg" alt="" width="238" height="210" /></a>
+						<a href="http://urirf.org"><img src="<?php print get_template_directory_uri(); ?>/img/nav/research.jpg" alt="" width="238" height="210" /></a>
 					</figure>
 					<div class="nav-feature">Learn about URI-developed technology at the <a href="http://urirf.org">URI Research Foundation</a>.</div>
 				</div>
@@ -129,7 +129,7 @@
 						<li><a href="http://web.uri.edu/globaluri/alumni/">International Alumni</a></li>
 					</ul>
 					<figure class="nav-figure">
-						<a href="#"><img src="<?php print get_template_directory_uri(); ?>/img/nav/study-abroad.png" alt="" width="238" height="210" /></a>
+						<a href="http://web.uri.edu/globaluri/study-abroad/"><img src="<?php print get_template_directory_uri(); ?>/img/nav/study-abroad.png" alt="" width="238" height="210" /></a>
 					</figure>
 					<div class="nav-feature"><a href="http://web.uri.edu/globaluri/study-abroad/">Study abroad</a> in one of many available international programs.</div>
 					

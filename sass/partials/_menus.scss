@@ -15,7 +15,10 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-
+	@include device(phone) {
+		bottom: auto;
+		top: 80%;
+	}
 	ul { // first level
 		display: none;
 		list-style: none;
@@ -27,6 +30,10 @@
 			margin-bottom: 0;
 			position: relative;
 			width: 20%;
+			@include device(phone) {
+				float: none;
+				width: 100%;
+			}
 			a {
 				color: $background;
 				display: block;
@@ -48,11 +55,24 @@
 			position: absolute;
 			top: 55px;
 			left: -999em;
-			z-index: 99999;
-			
+			z-index: 99999;			
+			@include device(phone) {
+				display: none;
+				float: none;
+				height: 0;
+				position: relative;
+				top: 0;
+				width: 100%;
+			}
 			li {
 				width: 100%;
 				float: none;
+				&.current-menu-item {
+					background-color: $medium-light-tint;
+					a {
+						color: $text;
+					}
+				}
 				a {
 					color: $link-color;
 					height: auto;
@@ -60,10 +80,15 @@
 					padding-top: 12px;
 					padding-bottom: 12px;
 					width: 200px;
+					@include device(phone) {
+						display: block;
+						width: 100%;
+					}
 					@include fade(background-color);
 				}
 				a:hover {
 					background-color: $link-color;
+					color: $background;
 				}
 			}
 			
@@ -76,7 +101,23 @@
 
 } // end .main-navigation
 
+@include device(phone) {
+	.menu-item-has-children {
+		&:after {
+			color: $background;
+			content: " \25BE";
+			position: absolute;
+			right: 1em;
+			top: 1em;
+		}
+	}
+	.menu-item-has-children:hover {
+		&:after {
+			transform: rotate(180deg) translateY(-3px);
+		}
+	}
 
+}
 
 .main-navigation .menu > li.current-menu-item > a,
 .main-navigation .menu > li.current-menu-parent > a {
@@ -85,6 +126,10 @@
 	margin-top: -3px;
 	padding-top: 3px;
 	height: 58px;
+	@include device(phone) {
+		background-color: $link-color;
+		border: 0;
+	}
 }
 .main-navigation li.current-menu-item > a:hover,
 .main-navigation li.current-menu-parent > a:hover {
@@ -105,7 +150,11 @@
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	left: auto;
+	left: 0;
+	@include device(phone) {
+		display: block;
+		height: auto;
+	}
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -123,6 +172,31 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.menu-toggle {
+	@include device(phone) {
+		height: 55px;
+		width: 100%;
+		&:after {
+			color: $text;
+			content: " \25BE";
+			position: absolute;
+			right: 1em;
+			top: 1em;
+		}
+	}
+}
+.toggled {
+	.menu-toggle {
+		@include device(phone) {
+			color: #fff;
+			background-color: #000;
+			&:after {
+				transform: rotate(180deg) translateY(-3px);
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 37.5em) {

@@ -120,6 +120,9 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	@include device(phone) {
+		margin-left: 0;
+	}
 }
 
 ul {
