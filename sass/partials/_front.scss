@@ -250,7 +250,7 @@ Theme Name: uri2016
 }
 
 /** zigzag background **/
-section#text-5, section#shortcode-widget-3 {	
+section#text-5, section#uri_featured_posts_widget-11 {	
 	background: $light-light-tint;
 	display: block;
 	margin: 3rem -200%;
@@ -302,22 +302,17 @@ section#text-5, section#shortcode-widget-3 {
 }
 
 /** URI in the News **/
-.front .hungryfeed_items {
+.front .uri-in-the-news ul {
 	column-count: 2;
+	column-gap: 1.5em;
+	margin-left: 0;
+	padding-left: 0;
 	@include device(phone) {
 		column-count: 1;
 	}
-	/*
-	 * the goal here was to keep the description from breaking into a new column, but it doesn't work
-	a, a+br {
-		-mozilla-column-break-after: avoid;
-		-webkit-column-break-after: avoid;
-		column-break-after: avoid;
+	li {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
 	}
-	a+br {
-		-mozilla-column-break-before: avoid;
-		-webkit-column-break-before: avoid;
-		column-break-before: avoid;
-	}
-	*/
 }
