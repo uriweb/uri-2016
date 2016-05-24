@@ -21,6 +21,9 @@ Theme Name: uri2016
 		top: -350px;
 		width: 100%;
 	}
+	@include device(tablet) {
+		margin: 0 auto;
+	}
 
 	a:link,
 	a:visited {

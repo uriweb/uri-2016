@@ -75,7 +75,7 @@ article.post {
 	font: 600 2rem/1.5 $sans;
 	margin-bottom: .25em;
 }
-.entry-content {
+.entry-content, .entry-summary {
 	max-width: 38.75rem;
 	line-height: 1.625;
 	@include device(tablet) {
