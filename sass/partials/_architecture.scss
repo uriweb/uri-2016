@@ -9,6 +9,9 @@
 	@include device(phone) {
 		padding: 0 .5em;
 	}
+	@include device(bigphone) {
+		padding: 0 .5em;
+	}
 	@include device(tablet) {
 		padding: 0 .5em;
 	}

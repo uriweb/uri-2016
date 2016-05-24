@@ -4,6 +4,7 @@
 		<ul id="links">
 			<li class="parentcat uri"><a href="http://uri.edu">URI</a>
 				<div class="sub-nav">
+					<div class="search-wrapper"><?php get_search_form(); ?></div>
 					<ul>
 						<li><a href="//uri.edu">URI Homepage</a></li>
 						<li><a href="//web.uri.edu/about/services/">A-Z (things)</a></li>

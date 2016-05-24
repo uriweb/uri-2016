@@ -19,6 +19,10 @@
 		bottom: auto;
 		top: 80%;
 	}
+	@include device(bigphone) {
+		bottom: auto;
+		top: 80%;
+	}
 	ul { // first level
 		display: none;
 		list-style: none;
@@ -31,6 +35,10 @@
 			position: relative;
 			width: 20%;
 			@include device(phone) {
+				float: none;
+				width: 100%;
+			}
+			@include device(bigphone) {
 				float: none;
 				width: 100%;
 			}
@@ -65,6 +73,15 @@
 				top: 0;
 				width: 100%;
 			}
+			@include device(bigphone) {
+				@include fade(height, 250ms);
+				display: none;
+				float: none;
+				height: 0;
+				position: relative;
+				top: 0;
+				width: 100%;
+			}
 			li {
 				width: 100%;
 				float: none;
@@ -75,13 +92,17 @@
 					}
 				}
 				a {
+					background-color: $background;
 					color: $link-color;
 					height: auto;
 					line-height: 24px;
 					padding-top: 12px;
 					padding-bottom: 12px;
-					width: 200px;
 					@include device(phone) {
+						display: block;
+						width: 100%;
+					}
+					@include device(bigphone) {
 						display: block;
 						width: 100%;
 					}
@@ -102,7 +123,24 @@
 
 } // end .main-navigation
 
-@include device(phone) {
+.menu-item-has-children {
+	&:after {
+		@include fade(all, 250ms);
+		color: $background;
+		content: " \25BE";
+		position: absolute;
+		right: 1em;
+		top: 1em;
+	}
+}
+.menu-item-has-children:hover {
+	&:after {
+		transform: rotate(180deg) translateY(-3px);
+	}
+}
+
+
+@include device(bigphone) {
 	.menu-item-has-children {
 		&:after {
 			@include fade(all, 250ms);
@@ -118,7 +156,6 @@
 			transform: rotate(180deg) translateY(-3px);
 		}
 	}
-
 }
 
 .main-navigation .menu > li.current-menu-item > a,
@@ -129,6 +166,10 @@
 	padding-top: 3px;
 	height: 58px;
 	@include device(phone) {
+		background-color: $link-color;
+		border: 0;
+	}
+	@include device(bigphone) {
 		background-color: $link-color;
 		border: 0;
 	}
@@ -177,32 +218,36 @@
 }
 
 .menu-toggle {
-	@include device(phone) {
-		height: 55px;
-		width: 100%;
-		&:after {
-			@include fade(all, 250ms);
-			color: $text;
-			content: " \25BE";
-			position: absolute;
-			right: 1em;
-			top: 1em;
-		}
+	height: 55px;
+	width: 100%;
+	&:after {
+		@include fade(all, 250ms);
+		color: $text;
+		content: " \25BE";
+		position: absolute;
+		right: 1em;
+		top: 1em;
 	}
 }
 .toggled {
 	.menu-toggle {
-		@include device(phone) {
 			color: #fff;
 			background-color: #000;
 			&:after {
 				transform: rotate(180deg) translateY(-3px);
 			}
-		}
 	}
 }
 
-@media screen and (min-width: 37.5em) {
+@include device(tablet) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+@include device(desktop) {
 	.menu-toggle {
 		display: none;
 	}

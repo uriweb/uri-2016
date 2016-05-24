@@ -69,6 +69,7 @@
 	}
 	@include device(bigphone) {
 		background-size: 75%;
+		margin-top: -31px;
 	}
 }
 .site-header {
@@ -118,7 +119,7 @@
 .site-description {
 	font: 600 1.2rem/1.5 $sans;
 }
-.search-wrapper {
+header .search-wrapper {
 	clear: right;
 	float: right;
 	margin-top: -11.5rem;
@@ -126,6 +127,9 @@
 	@include device(phone) {
 		display: none;
 	}
+}
+nav .search-wrapper {
+	margin-bottom: 1em;
 }
 .search-wrapper label {
 	margin-right: -.25em;
@@ -141,6 +145,12 @@
 	border-radius: 0;
 	font: 600 1.2rem/1.5 $sans;
 	-webkit-appearance: textfield;
+	@include device(bigphone) {
+		width: 12rem;
+	}
+	@include device(phone) {
+		width: 10rem;
+	}
 }
 .search-wrapper input.search-submit:hover {
 	background-color: $accent;
