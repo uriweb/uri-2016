@@ -30,12 +30,19 @@
 	@include device(phone) {
 		margin: 0;
 	}
+	@include device(bigphone) {
+		margin: 0;
+	}
 }
 .site-content .widget-area {
 	float: right;
 	overflow: hidden;
 	width: 25%;
 	@include device(phone) {
+		float: none;
+		width: 100%;
+	}
+	@include device(bigphone) {
 		float: none;
 		width: 100%;
 	}

@@ -21,6 +21,7 @@
 	}
 	@include device(bigphone) {
 		bottom: auto;
+		margin-left: -.5em;
 		top: 80%;
 	}
 	ul { // first level
