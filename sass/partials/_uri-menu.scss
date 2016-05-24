@@ -18,7 +18,7 @@ Theme Name: uri2016
 	@include device(phone) {
 		margin-left: -.5em;
 		margin-right: -.5em;
-		top: -350px;
+		top: -348px;
 		width: 100%;
 	}
 	@include device(tablet) {
@@ -78,14 +78,17 @@ Theme Name: uri2016
 				width: 100%;
 			}
 
-			&:hover {
+			&:hover, &:focus {
 				background-color: $accent-light;
 				.sub-nav {
 					background-color: $accent-light;
 					display: block;
-					height: 100%;
+					// setting height to a number can animate the slide down effect,
+					// but it breaks the toggle functionality on touch screens
+					height: auto; 
 				}
 			}
+
 			.sub-nav {
 				display: none;
 				left: 230px;
@@ -95,9 +98,13 @@ Theme Name: uri2016
 				top: 0;
 				font-weight: 400;
 				@include device(phone) {
+					@include fade(all, 200ms);
 					background-color: $accent-light;
+					display: block;
 					font-size: .75em;
-					padding: .25em 1em;
+					height: 0;
+					overflow-y: hidden;
+					padding: 0 1em;
 					position: relative;
 					width: 100%;
 					left: 0;
@@ -118,6 +125,31 @@ Theme Name: uri2016
 
 } // end #nav
 
+@include device(phone) {
+	#nav .uri {
+		background-color: $accent-light;
+		border-bottom: 2px solid $accent;
+	}
+	#nav .uri .sub-nav {
+		height: auto !important;
+	}
+	.parentcat > a {
+		display: block;
+		position: relative;
+	}
+	.parentcat > a:after {
+		@include fade(all, 250ms);
+		color: $background;
+		content: " \25BE";
+		position: absolute;
+		right: 1em;
+		top: 0em;
+	}
+	.parentcat:focus > a:after, .parentcat:hover > a:after {
+		color: $text;
+		transform: rotate(180deg) translateY(-3px);
+	}
+}
 .nav-feature {
 	bottom: 0;
 	margin-left: 15px;
@@ -136,10 +168,10 @@ Theme Name: uri2016
 	}
 }
 
-.logged-in #nav{
+.logged-in #nav {
 	top: -288px;
 	@include device(phone) {
-		top: -350px;
+		top: -348px;
 	}
 }
 #nav.open {
@@ -174,7 +206,7 @@ Theme Name: uri2016
 .open #nav-toggle:after {
 	transform: rotate(180deg) translateY(-3px);
 	//transition: all 200ms cubic-bezier(1, 0, 1, 1); 
-	@include fade(all);
+	@include fade(all, 250ms);
 }
 #nav-close {
 	background-color: $accent-light;

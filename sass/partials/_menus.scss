@@ -57,6 +57,7 @@
 			left: -999em;
 			z-index: 99999;			
 			@include device(phone) {
+				@include fade(height, 250ms);
 				display: none;
 				float: none;
 				height: 0;
@@ -104,6 +105,7 @@
 @include device(phone) {
 	.menu-item-has-children {
 		&:after {
+			@include fade(all, 250ms);
 			color: $background;
 			content: " \25BE";
 			position: absolute;
@@ -179,6 +181,7 @@
 		height: 55px;
 		width: 100%;
 		&:after {
+			@include fade(all, 250ms);
 			color: $text;
 			content: " \25BE";
 			position: absolute;
