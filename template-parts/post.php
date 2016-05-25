@@ -81,13 +81,8 @@
 		<?php
 		if ( 'post' === get_post_type() && is_single() ) : ?>
 		<div class="entry-meta">			
-			<div class="end-of-article-call" id="uri-next">
-				<h4>Next:</h4>
-				<p><?php previous_post_link( '<div class="previous">%link</div>', '%title', true ); ?></p>
-				<p><a href="https://securelb.imodules.com/s/1638/03-Foundation/interior-hybrid.aspx?sid=1638&gid=3&pgid=770&cid=2270">Support the University of Rhode Island</a>.</p>
-			</div>
-
 			<?php
+				get_template_part( 'template-parts/more-links' );
 				uri2016_posted_on();
 			?>
 			

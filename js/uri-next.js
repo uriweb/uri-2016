@@ -4,6 +4,8 @@
  * Handles animation for the "up next" box
  */
 
+var showNext = false;
+
 window.addEventListener("load", function() {
 	var el = document.getElementById("uri-next");
 	if(el === null) {
@@ -17,9 +19,11 @@ window.addEventListener("load", function() {
 
 
 function nextOnScreen() {
+	if(showNext) return;
 	var el = document.getElementById("uri-next");
 	if( isElementInViewport(el) ) {
 		el.className = el.className.replace(/hidden/i, "shown");
+		showNext = true;
 	} else {
 		el.className = el.className.replace(/shown/i, "hidden");
 	}
@@ -32,7 +36,7 @@ function isElementInViewport(el) {
 	return (
 		rect.top >= 0 &&
 		rect.left >= 0 &&
-		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+		rect.top <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
 		rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
 	);
 }

@@ -223,14 +223,16 @@ aside.media-contact {
 	}
 }
 
+
+
 .end-of-article-call {
 	background-color: $background;
 	font-family: $sans;
 	font-size: 1.2rem;
 	margin: 8rem 0 4rem 25%;
 	opacity: 0;
-	padding: 1.5rem 2rem;
-	transform: rotate(10deg);
+	padding: 0 2rem;
+	transform: rotate(-10deg);
 	@include fade(all, 500ms);
 
 	@include device(phone) {
@@ -240,14 +242,15 @@ aside.media-contact {
 		transform: rotate(0);
 	}
 
-	h4 {
+	h4, p {
 		margin-top: 0;
 	}
 
 	&.shown {
-		margin-top: 4rem;
+		margin-top: 2rem;
 		background-color: $light-tint;
 		opacity: 1;
+		padding: 1.5rem 2rem;
 		transform: rotate(0);
 		@include device(phone) {
 			margin: 0 0 1.5em;

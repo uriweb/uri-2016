@@ -1,3 +1,12 @@
+<?php
+	$media_contacts = uri2016_get_media_contacts($post);
+	$attachment = get_field( 'attachment', $post->ID );
+	//echo '<pre>', print_r($attachment, TRUE), '</pre>';
+	$extension = explode( '.', $attachment['url'] );
+	$extension = $extension[count($extension)-1];
+	$title = $attachment['title'] . ' (' . $extension . ')';
+?>
+
 <aside class="media-contact">
 	<h1>Media</h1>
 	<?php if(is_array($media_contacts)): ?>
@@ -16,6 +25,25 @@
 // 	preg_match('/\[gallery.*ids=.(.*).\]/', $post->post_content, $ids);
 // 	$images_id = explode(",", $ids[1]);
 // 	echo '<pre>', print_r($images_id, TRUE), '</pre>';
+
+		if( ! empty ( $attachment ) ) : 
+		?>
+		<h2>Attachment:</h2>
+		<div class="attachment"><a href="<?php print $attachment['url']; ?>" title="Download <?php print $title; ?>"><?php print $title; ?></a>
+		<span class="attachment-description">
+		<?php if ( ! empty( $attachment['caption'] ) ): ?>
+		<br />
+		<strong><?php print $attachment['caption']; ?></strong>
+		<?php endif; ?>
+		<?php if ( ! empty( $attachment['description'] ) ): ?>
+		<br />
+		<?php print $attachment['description']; ?>
+		<?php endif; ?>
+		</span>
+		</div>
+		
+		<?php
+		endif;
 
 		$media = get_attached_media( 'image' );
 		
