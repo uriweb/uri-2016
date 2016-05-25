@@ -13,92 +13,58 @@
 		$additional_classes[] = 'excerpt';
 	}
 
+	$publication_name = get_field( 'publication_name', $post->ID );
+	$url = get_field( 'url', $post->ID );
+	$article_title = get_field( 'article_title', $post->ID );
+	$date = get_field( 'date', $post->ID );
+	$date = date( 'M j, Y', strtotime( $date ) );
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $additional_classes ); ?>>
+
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="entry-title"><a href="' . $url . '" rel="bookmark">', '</a></h2>' );
 			}
 		?>
-
 	</header><!-- .entry-header -->
 
+
 	<div class="entry-content">
+		<div class="uri-in-the-news-details">
+			<p>
+			<?php if ( is_single() ) : ?>
+				<a href="<?php echo $url; ?>"><?php echo $article_title; ?></a><br />
+			<?php endif; ?>
+			<?php print $publication_name; ?> on <?php print $date; ?></p>
+		</div>
 		<?php
-
-			// show the lead art
-			get_template_part( 'template-parts/lead-art' );
-
-
-			if( is_single() ) {
-				$publication_name = get_field( 'publication_name', $post->ID );
-				$url = get_field( 'url', $post->ID );
-				$article_title = get_field( 'article_title', $post->ID );
-				$date = get_field( 'date', $post->ID );
-				$date = date( 'M n, Y', strtotime( $date ) );
-				?>
-					<div class="uri-in-the-news-details">
-						<p><a href="<?php print $url; ?>"><?php print $article_title; ?></a><br />
-						<?php print $publication_name; ?> on <?php print $date; ?></p>
-					</div>
-				<?php
-			}
-
-			if( is_single() ) {
-
-				the_content( sprintf(
-					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'uri2016' ), array( 'span' => array( 'class' => array() ) ) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uri2016' ),
-					'after'  => '</div>',
-				) );
-
-			} else {
-					$content = get_the_content();
-					$content = strip_tags($content, '<a><strong><em><p><div>');
-					$content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 		
-					$content = preg_replace("/<iframe[^>]+\>/i", "(video) ", $content);             
-					$content = apply_filters('the_content', $content);
-					$content = str_replace(']]>', ']]>', $content);
-					echo $content;
-
-			}
+			the_content( sprintf(
+				/* translators: %s: Name of current post. */
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'uri2016' ), array( 'span' => array( 'class' => array() ) ) ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			) );
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uri2016' ),
+				'after'  => '</div>',
+			) );
 		?>
-		<?php
-			$tags = get_the_tags();
-			$tags_output = array();
-			if ($tags) {
-				foreach($tags as $tag) {
-					$tags_output[] = $tag->name;
-				}
-				print '<div class="expertise">Areas of expertise: ' . implode( ', ', $tags_output) . '</div>';
-			}
-		?>
-
 	</div><!-- .entry-content -->
 
+
 	<footer class="entry-footer">
-		<?php
-		if ( 'post' === get_post_type() && is_single() ) : ?>
+		<?php if ( 'post' === get_post_type() && is_single() ) : ?>
 		<div class="entry-meta">			
 			<?php
 				get_template_part( 'template-parts/more-links' );
 				uri2016_posted_on();
 			?>
-			
 		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-		<?php
-			//uri2016_entry_footer();
-		?>
+		<?php endif; ?>
 	</footer><!-- .entry-footer -->
 	
 </article><!-- #post-## -->
