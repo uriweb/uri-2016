@@ -260,11 +260,18 @@ section#text-5, section#uri_featured_posts_widget-11 {
 	@include device(phone) {
 		margin: 3rem -.5rem;
 	}
+	@include device(bigphone) {
+		margin: 3rem -.5rem;
+	}
 
 	.widget-inner {
 		width: 960px;
 		margin: 0 auto;
 		@include device(phone) {
+			margin: 0 .5rem;
+			width: 100%;
+		}
+		@include device(bigphone) {
 			margin: 0 .5rem;
 			width: 100%;
 		}
@@ -305,6 +312,7 @@ section#text-5, section#uri_featured_posts_widget-11 {
 .front .uri-in-the-news ul {
 	column-count: 2;
 	column-gap: 1.5em;
+	font-family: $sans;
 	margin-left: 0;
 	padding-left: 0;
 	@include device(phone) {
@@ -314,5 +322,8 @@ section#text-5, section#uri_featured_posts_widget-11 {
 		list-style: none;
 		margin-left: 0;
 		padding-left: 0;
+		a {
+			font-weight: 700;
+		}
 	}
 }
