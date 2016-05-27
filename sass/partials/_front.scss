@@ -253,7 +253,8 @@ Theme Name: uri2016
 section#text-5, section#uri_featured_posts_widget-11 {	
 	background: $light-light-tint;
 	display: block;
-	margin: 3rem -200%;
+	margin: 3rem 0;
+	max-width: none;
 	padding: 2rem 0 4rem;
 	position: relative;
 
