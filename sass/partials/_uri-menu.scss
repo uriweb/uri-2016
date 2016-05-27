@@ -168,6 +168,10 @@ Theme Name: uri2016
 
 } // end #nav
 
+.sub-nav .search-form label {
+	padding-top: 1px;
+}
+
 @include device(phone) {
 	#nav .uri {
 		background-color: $accent-light;
