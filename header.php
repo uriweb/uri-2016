@@ -69,4 +69,8 @@
 		</div>
 	</header><!-- #masthead -->
 
+	<div id="region-prefix" class="region-prefix prefix">
+		<?php dynamic_sidebar( 'prefix' ); ?>
+	</div><!-- #region-prefix -->
+
 	<div id="content" class="site-content site">

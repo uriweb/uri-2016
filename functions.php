@@ -99,12 +99,12 @@ add_action( 'after_setup_theme', 'uri2016_content_width', 0 );
  */
 function uri2016_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'uri2016' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'uri2016' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'name'          => 'Prefix',
+		'id'            => 'prefix',
+		'description'   => esc_html__( 'Add widgets for the prefix area here.', 'uri2016' ),
+		'before_widget' => '<section id="%1$s" class="%2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="region-sidebar">',
+		'before_title'  => '<h2 class="region-prefix">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
@@ -114,6 +114,15 @@ function uri2016_widgets_init() {
 		'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
 		'after_widget'  => '</div></section>',
 		'before_title'  => '<h2 class="region-front">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'uri2016' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'uri2016' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="region-sidebar">',
 		'after_title'   => '</h2>',
 	) );
 }
