@@ -1,0 +1,36 @@
+/*
+Theme Name: uri2016
+*/
+
+.alert-box {
+	background-color: $light-tint;
+	background-position: 1.5em 50%;
+	background-repeat: no-repeat;
+	background-size: 1.5em;
+	font-family: $sans;
+	margin: 0 auto 1em;
+	max-width: 960px;
+	padding: 1.5em 1em;
+	&.normal {
+		@include alertbox($dark-tint, $light-tint);
+	}
+	&.information {
+		@include alertbox(#4c9800, lighten(#4c9800, 65%));
+		background-image: url(img/icon-alert-green.svg);
+		padding-left: 4em;
+	}
+	&.caution {
+		@include alertbox(#a88a03, lighten(#deb600, 50%));
+		background-image: url(img/icon-alert-yellow.svg);
+		padding-left: 4em;
+	}
+	&.emergency {
+		@include alertbox(#900, lighten(#900, 65%));
+		background-image: url(img/icon-alert-red.svg);
+		padding-left: 4em;
+	}
+	a:link, a:visited, a:hover {
+		font-weight: 700;
+	}
+}
+

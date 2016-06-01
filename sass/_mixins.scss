@@ -45,6 +45,16 @@ $break-large: 960px;
 	transition: $property $speed cubic-bezier(.3, .6, .6, 1);
 }
 
+/**
+ *  Handles alert box styles
+ */
+@mixin alertbox($color, $bg) {
+	background-color: $bg;
+	border-top: 6px solid $color;
+	color: $color;
+}
+
+
 .hanging-right {
 	clear: both;
 	float: right;
@@ -60,5 +70,7 @@ $break-large: 960px;
 		width: auto !important;
 	}
 }
+
+
 
 
