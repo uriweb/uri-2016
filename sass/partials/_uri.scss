@@ -260,6 +260,16 @@ aside.media-contact {
 }
 
 
+.single .post #content:before,
+.single .post .press-release-import:before {
+	background-color: $light-tint;
+	content: 'Note: this article was automatically converted from an older format.  Presentation may have changed.';
+	font-family: $sans;
+	display: block;
+	margin: 1em;
+	padding: 1em;
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

@@ -26,11 +26,11 @@
 			<p>University of Rhode Island, Kingston, RI 02881, USA 1.401.874.1000<br />
 			URI is an equal opportunity employer committed to the principles of affirmative action.</p>
 			<ul class="internal">
-				<li><a href="http://web.uri.edu/ecampus">eCampus</a></li>
-				<li><a href="http://sakai.uri.edu/">Sakai</a></li>
-				<li><a href="//web.uri.edu/its/uri-email/">Email</a></li>
-				<li><a href="//web.uri.edu/experience/rhodynet/">RhodyNet</a></li>
-				<li><a href="<?php echo wp_login_url(); ?>">Login</a></li>
+				<li><a href="http://web.uri.edu/ecampus" rel="nofollow">eCampus</a></li>
+				<li><a href="http://sakai.uri.edu/" rel="nofollow">Sakai</a></li>
+				<li><a href="//web.uri.edu/its/uri-email/" rel="nofollow">Email</a></li>
+				<li><a href="//web.uri.edu/experience/rhodynet/" rel="nofollow">RhodyNet</a></li>
+				<li><a href="<?php echo wp_login_url(); ?>" rel="nofollow">Login</a></li>
 			</ul>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

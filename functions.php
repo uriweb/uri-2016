@@ -158,6 +158,7 @@ function uri2016_scripts() {
 	}
 
 	wp_enqueue_script( 'uri2016-skip-link-focus-fix', $theme . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'uri2016-quadcams', $theme . '/js/uri-quadcams.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'uri-next', $theme . '/js/uri-next.js', array(), '20160510', true );
 
