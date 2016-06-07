@@ -18,14 +18,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 
-			<?php if ( is_front_page() && is_active_sidebar( 'front' ) ) : ?>
-			
-				<div id="region-front" class="region-front widgets front">
-					<?php dynamic_sidebar( 'front' ); ?>
-				</div><!-- #region-front -->
-				
-			<?php else: ?>
-
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -39,8 +31,15 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-
+			<?php if ( is_front_page() && is_active_sidebar( 'front' ) ) : ?>
+			
+				<div id="region-front" class="region-front widgets front">
+					<?php dynamic_sidebar( 'front' ); ?>
+				</div><!-- #region-front -->
+				
 			<?php endif; ?>
+
+
 
 
 		</main><!-- #main -->
