@@ -7,7 +7,54 @@
  * @package uri2016
  */
 
-get_header(); ?>
+$title = get_the_archive_title();
+get_header();
+
+?>
+
+	<?php if ( $title == 'Category: Experts' ): ?>
+		<form method="get" action="<?php echo esc_url( home_url( '/' ) . 'experts' ); ?>" class="experts-filter">
+			<fieldset>
+				<legend>Filter Experts</legend>
+				<select name="tag" id="tagselect" class="postform" onchange="submit();">
+					<option value="">Tags (All)</option>
+					<?php
+						$terms = get_terms('post_tag', array(
+					    'hide_empty' => TRUE,
+						));
+						if ( $terms ) {
+							foreach ( $terms as $term ) {
+								$selected = ($term->slug == $_REQUEST['services']) ? ' selected="selected"' : '';
+								echo '<option' . $selected . 
+									' value="' . esc_attr( $term->slug ) . '">' . 
+									esc_html( $term->name ) . 
+									' (' . $term->count . ')</option>';
+							}
+						}
+					?>
+				</select>
+			
+				OR
+		
+				<select name="n" id="nameselect" class="postform" onchange="submit();">
+					<option value="">A-Z (All)</option>
+					<?php
+						$letters = $wpdb->get_results( "SELECT DISTINCT LEFT(meta_value, 1) as fl, COUNT(meta_id) AS count FROM wp_postmeta WHERE meta_key = 'sort_name' GROUP BY fl ORDER BY fl ASC" );
+						if ( $letters ) {
+							foreach ( $letters as $l ) {
+								$selected = ($l->fl == $_REQUEST['n']) ? ' selected="selected"' : '';
+								echo '<option' . $selected . 
+									' value="' . esc_attr( $l->fl ) . '">' . 
+									esc_html( $l->fl ) . 
+									' (' . $l->count . ')</option>';
+							}
+						}
+					?>
+				</select>
+				<input type="submit" value="Submit" />
+			</fieldset>
+		</form>
+	<?php endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -17,7 +64,6 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					$title = get_the_archive_title();
 					print '<h1 class="page-title">' . str_replace( 'Category: ', '', $title ) . '</h1>';
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>

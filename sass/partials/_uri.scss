@@ -278,6 +278,19 @@ aside.media-contact {
 	padding: 1em;
 }
 
+.experts-filter {
+	input, select {
+		display: block;
+		margin-bottom: .5em;
+		max-width: 20rem;
+	}
+	@include device(desktop) {
+		input, select {
+			display: inline;
+		}
+	}
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

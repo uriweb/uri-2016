@@ -283,6 +283,18 @@ function uri2016_paging_nav() {
 	endif;
 }
 
+/**
+ * Filter archive views by sortname if the 'n' parameter is set and one character long
+ */
+function uri2016_archive_meta_query( $query ) {
+	if ( $query->is_archive && isset ( $_REQUEST['n'] ) && strlen ( $_REQUEST['n'] ) == 1 ) {
+		// filter by first letter of sort name		
+		$query->set('meta_key', 'sort_name');
+		$query->set('meta_value', '^' . $_REQUEST['n']);
+		$query->set('meta_compare', 'RLIKE');
+	}
+}
+add_action( 'pre_get_posts', 'uri2016_archive_meta_query', 1 );
 
 
 
