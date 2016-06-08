@@ -239,6 +239,14 @@ aside.media-contact {
 		margin: 0 0 1.5em;
 		background-color: $light-tint;
 		opacity: 1;
+		padding-bottom: 3rem !important;
+		transform: rotate(0);
+	}
+	@include device(bigphone) {
+		margin: 0 0 1.5em;
+		background-color: $light-tint;
+		opacity: 1;
+		padding-bottom: 3rem !important;
 		transform: rotate(0);
 	}
 

@@ -62,20 +62,7 @@
 
 			}
 		?>
-		<?php
-			if( $is_expert ) {
-				$tags = get_the_tags();
-				$tags_output = array();
-				if ($tags) {
-					foreach($tags as $tag) {
-						$tags_output[] = $tag->name;
-					}
-					print '<div class="expertise">Areas of expertise: ' . implode( ', ', $tags_output) . '</div>';
-				}
-			}
-		?>
-
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php
