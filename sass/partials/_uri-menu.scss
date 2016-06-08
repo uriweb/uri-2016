@@ -222,7 +222,7 @@ Theme Name: uri2016
 	}
 }
 
-.logged-in #nav {
+.admin-bar #nav {
 	top: -288px;
 	@include device(phone) {
 		top: -397px;
@@ -231,12 +231,13 @@ Theme Name: uri2016
 #nav.open {
 	top: 0;
 }
-.logged-in #nav.open {
+.admin-bar #nav.open {
 	top: 32px;
 	@include device(phone) {
 		top: 0;
 	}
 }
+
 
 
 #nav-toggle {
