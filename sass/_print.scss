@@ -1,0 +1,36 @@
+/**
+ * Print Styles
+ */
+@media print {
+	nav,
+	.nav-wrapper,
+	.internal,
+	end-of-article-call.shown,
+	.tactical,
+	.alert-box,
+	.search-wrapper
+	 {
+		display: none !important;
+	}
+	
+	#masthead,
+	.site-branding {
+		background-color: #fff !important;
+		background-image: none !important;
+		height: 100px !important;
+		min-height: 10px !important;
+	}
+
+	.site-branding {
+		padding: 1em 0 !important;
+		position: static !important;
+	}
+	
+	.site-title,
+	.site-title a,
+	.site-description {
+		color: #000 !important;
+		text-shadow: none !important;
+	}
+
+}

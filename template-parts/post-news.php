@@ -13,7 +13,8 @@
 		$additional_classes[] = 'excerpt';
 	}
 	
-	if( ! empty( get_field( 'show_the_media_box', $post->ID ) ) && is_single() ) {
+	$smbv = get_field( 'show_the_media_box', $post->ID );
+	if( ! empty( $smbv ) && is_single() ) {
 		$show_media_box = TRUE;
 	}
 
