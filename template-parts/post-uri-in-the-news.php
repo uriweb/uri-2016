@@ -15,7 +15,6 @@
 
 	$publication_name = get_field( 'publication_name', $post->ID );
 	$url = get_field( 'url', $post->ID );
-	$article_title = get_field( 'article_title', $post->ID );
 	$date = get_field( 'date', $post->ID );
 	$date = date( 'M j, Y', strtotime( $date ) );
 
@@ -38,7 +37,7 @@
 		<div class="uri-in-the-news-details">
 			<p>
 			<?php if ( is_single() ) : ?>
-				<a href="<?php echo $url; ?>"><?php echo $article_title; ?></a><br />
+				<a href="<?php echo $url; ?>"><?php the_title( ); ?></a><br />
 			<?php endif; ?>
 			<?php print $publication_name; ?> on <?php print $date; ?></p>
 		</div>
