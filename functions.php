@@ -280,6 +280,30 @@ function uri2016_paging_nav() {
 }
 
 /**
+ * Customize the "Read More" link that shows up at the end of excerpts
+ */
+function uri2016_modify_read_more_link() {
+	return '<a class="more-link" href="' . get_permalink() . '">More ...</a>';
+}
+add_filter( 'the_content_more_link', 'uri2016_modify_read_more_link' );
+
+
+/**
+ * Grab an excerpt with line breaks and remove images and videos from it.
+ * @return str
+ */
+function uri2016_get_excerpt_with_line_breaks() {
+	$content = get_the_content();
+	$content = strip_tags($content, '<a><strong><em><p><div>');
+	$content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 		
+	$content = preg_replace("/<iframe[^>]+\>/i", "(video) ", $content);             
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]>', $content);
+	return $content;
+}
+
+
+/**
  * Filter archive views by sortname if the 'n' parameter is set and one character long
  */
 function uri2016_archive_meta_query( $query ) {

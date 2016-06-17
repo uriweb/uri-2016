@@ -39,6 +39,9 @@ Theme Name: uri2016
 .front .news .primary figure {
 	float: left;
 	margin: 0 1em 0 0;
+	img {
+		display: block;
+	}
 	@include device(phone) {
 		float: none;
 		margin: 0;

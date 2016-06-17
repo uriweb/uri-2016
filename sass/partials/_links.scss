@@ -30,7 +30,8 @@ a:active {
 
 // note: article was .entry-content so that "highlighter" links were only in body copy and not headlines
 
-.entry-content a {
+.entry-content a,
+.front .news .primary a {
 	text-decoration: none;
 	&:link {
 		/* WIRED has the coolest link styles */
