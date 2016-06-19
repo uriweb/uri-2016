@@ -63,6 +63,9 @@ div.lead-video {
 figure.alignright {
 	@extend .hanging-right;
 }
+figure.alignright.no-hang {
+	margin-right: 0 !important;
+}
 
 .simplePullQuote {
 	box-shadow: none !important;

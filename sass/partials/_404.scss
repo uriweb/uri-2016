@@ -1,0 +1,51 @@
+.error-404 {
+	h1 {
+		font-family: $sans;
+		font-size: 9rem;
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		text-transform: uppercase;
+			@include device(phone) {
+				font-size: 2.875rem;
+			}
+			@include device(bigphone) {
+				font-size: 5.25rem;
+			}
+			@include device(tablet) {
+				font-size: 7rem;
+			}
+	}
+	
+	hgroup h2 {
+		text-align: center;
+	}
+	
+	.hanging-right {
+		max-width: 640px !important;
+	}
+	
+	.recent-news-404,
+	.recent-news-404 li {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.recent-news-404 li {
+		clear: left;
+		margin-bottom: 2em;
+	}
+	.recent-news-404 img {
+		display: block;
+		float: left;
+		margin-right: 1em;
+	}
+	
+	
+	.search-wrapper {
+		background-color: $light-tint;
+		padding: .25em;
+		width: 342px;
+	}
+}

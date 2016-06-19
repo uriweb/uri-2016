@@ -229,6 +229,53 @@ function uri2016_limit_posts_per_archive_page() {
 add_filter('pre_get_posts', 'uri2016_limit_posts_per_archive_page');
 
 
+
+function uri2016_add_image_class($class, $id, $align, $size) {
+	if($size[0] < 250) {
+		$class .= ' no-hang ' . print_r($id, TRUE);
+	}
+	return $class;
+}
+add_filter('get_image_tag_class','uri2016_add_image_class');
+
+
+
+
+/**
+ * Replace the default caption shortcode handler.
+ *
+ * This is a trick to add a "no-hang" class to right-aligned images that
+ * are narrower than 320px
+ *
+ * @return void
+ */
+function uri2016_replace_wp_caption_shortcode() {
+	remove_shortcode( 'caption', 'img_caption_shortcode' );
+	remove_shortcode( 'wp_caption', 'img_caption_shortcode' );
+	add_shortcode( 'caption', 'uri2016_caption_shortcode' );
+	add_shortcode( 'wp_caption', 'uri2016_caption_shortcode' );
+}
+add_action( 'after_setup_theme', 'uri2016_replace_wp_caption_shortcode' );
+
+/**
+ * Add the new class to the caption.
+ *
+ * @param  array  $attr    Shortcode attributes
+ * @param  string $content Caption text
+ * @return string
+ */
+function uri2016_caption_shortcode( $attr, $content = NULL ) {
+	$class = ( $attr['width'] < 320 ) ? 'no-hang' : 'hang';
+	$caption = img_caption_shortcode( $attr, $content );
+	$caption = str_replace( 'class="wp-caption', 'class="wp-caption ' . $class, $caption );
+	return $caption;
+}
+
+
+
+
+
+
 /**
  * Display navigation to next/previous set of posts when applicable.
  * Based on paging nav function from Twenty Fourteen
