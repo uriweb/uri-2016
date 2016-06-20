@@ -98,8 +98,7 @@
 					color: $link-color;
 					height: auto;
 					line-height: 24px;
-					padding-top: 12px;
-					padding-bottom: 12px;
+					padding: 12px 4px;
 					@include device(phone) {
 						display: block;
 						width: 100%;
