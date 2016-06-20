@@ -5,10 +5,11 @@
 	nav,
 	.nav-wrapper,
 	.internal,
-	end-of-article-call.shown,
+	.end-of-article-call.shown,
 	.tactical,
 	.alert-box,
-	.search-wrapper
+	.search-wrapper,
+	aside#secondary
 	 {
 		display: none !important;
 	}
@@ -31,6 +32,15 @@
 	.site-description {
 		color: #000 !important;
 		text-shadow: none !important;
+	}
+	
+	a:link, a:visited {
+		text-decoration: none;
+	}
+	article a:after {
+		content:" <" attr(href) "> ";
+		font-size:0.8em;
+		font-weight:normal;
 	}
 
 }
