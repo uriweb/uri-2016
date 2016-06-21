@@ -189,6 +189,10 @@ nav .search-wrapper {
 	padding-top: 1em;
 }
 
+aside .media-entry {
+	display: block;
+	margin-bottom: .5em;
+}
 aside.media-contact {
 	@extend .hanging-right;
 	margin-right: -21.25rem !important;

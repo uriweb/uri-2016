@@ -12,8 +12,10 @@
 	<?php if(is_array($media_contacts)): ?>
 		<h2>Media Contact<?php print (count($media_contacts) == 1) ? '' : 's'; ?>:</h2>
 		<?php foreach($media_contacts as $c): ?>
+			<span class="media-entry">
 			<span class="media-name"><a href="mailto:<?php print $c['email']; ?>"><?php print $c['name']; ?></a></span><br />
 			<?php print $c['telephone']; ?>
+			</span>
 		<?php endforeach; ?>
 	<?php endif; ?>
 	
