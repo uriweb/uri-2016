@@ -19,6 +19,13 @@
 	}
 
 	$media_contacts = uri2016_get_media_contacts($post);
+	
+	// get the deck; empty it if it's just a copy of the title.
+	$deck = get_field( 'deck', $post->ID );
+	if( $deck == get_the_title() ) {
+		$deck = '';
+	}
+
 
 ?>
 
@@ -26,9 +33,19 @@
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
+				print '<hgroup>';
 				the_title( '<h1 class="entry-title">', '</h1>' );
+				if( ! empty( $deck ) ) {
+					print '<h2 class="deck">' . $deck . '</h2>';
+				}
+				print '</hgroup>';
 			} else {
+				//print '<hgroup>';
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				//if( ! empty( $deck ) ) {
+				//	print '<h3 class="deck">' . $deck . '</h2>';
+				//}
+				//print '</hgroup>';
 			}
 		?>
 

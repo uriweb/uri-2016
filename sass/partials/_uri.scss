@@ -168,6 +168,12 @@ nav .search-wrapper {
 	h2.entry-title {
 		font-family: $sans;
 	}
+	.deck {
+		font-weight: 400;
+	}
+	h3.deck { // teasers
+		font-size: 1.25rem;
+	}
 }
 
 .read-more {
