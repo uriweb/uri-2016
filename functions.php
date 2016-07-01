@@ -138,7 +138,8 @@ function uri2016_scripts() {
 	wp_register_script( 'wp_environment', null);
 	wp_enqueue_script( 'wp_environment', false, array(), false, true );
 	$data = array(
-		'theme_url' => $theme
+		'theme_url' => $theme,
+		'base_url' => get_site_url()
 	);
 	//after wp_enqueue_script
 	wp_localize_script( 'wp_environment', 'wordpress_environment', $data );
@@ -157,7 +158,7 @@ function uri2016_scripts() {
 	wp_enqueue_script( 'uri2016-skip-link-focus-fix', $theme . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'uri-next', $theme . '/js/uri-next.js', array(), '20160510', true );
 
-
+	wp_enqueue_script( 'uri-search', $theme . '/js/uri-search.js', array(), '20160510', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
