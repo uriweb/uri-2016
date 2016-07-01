@@ -75,7 +75,7 @@ function uri2016_entry_footer() {
 			esc_html__( 'Edit %s', 'uri2016' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link button">',
+		'<span class="edit-link">',
 		'</span>'
 	);
 }
