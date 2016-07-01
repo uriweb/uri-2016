@@ -258,6 +258,9 @@ function uri2016_replace_wp_caption_shortcode() {
 }
 add_action( 'after_setup_theme', 'uri2016_replace_wp_caption_shortcode' );
 
+
+
+
 /**
  * Add the new class to the caption.
  *
