@@ -170,15 +170,7 @@ Theme Name: uri2016
 }
 
 .front div.more a {
-	background-color: $link-color;
-	border-radius: 3px;
-	color: #fff;
-	display: inline-block;
-	font-family: $sans;
-	font-weight: 700;
-	margin: 0 auto;
-	padding: 1em 2em;
-	text-decoration: none;
+	@extend .button;
 	@include device(phone) {
 		padding: 1em 0;
 		width: 65%;

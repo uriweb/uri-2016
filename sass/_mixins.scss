@@ -76,6 +76,19 @@ $break-large: 960px;
 	}
 }
 
-
+.button {
+	background-color: $link-color !important;
+	border-radius: 3px;
+	color: #fff !important;
+	display: inline-block;
+	font-family: $sans;
+	font-weight: 700;
+	margin: 0 auto;
+	padding: 1em 2em;
+	text-decoration: none;
+	&:hover {
+		background-color: $dark-tint !important;
+	}
+}
 
 
