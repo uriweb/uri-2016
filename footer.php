@@ -29,7 +29,7 @@
 				<li><a href="http://web.uri.edu/ecampus" rel="nofollow">eCampus</a></li>
 				<li><a href="http://sakai.uri.edu/" rel="nofollow">Sakai</a></li>
 				<li><a href="//web.uri.edu/its/uri-email/" rel="nofollow">Email</a></li>
-				<li><a href="//web.uri.edu/experience/rhodynet/" rel="nofollow">RhodyNet</a></li>
+				<li><a href="https://rhodynet.uri.edu" rel="nofollow">RhodyNet</a></li>
 				<li><a href="<?php echo wp_login_url(); ?>" rel="nofollow">Login</a></li>
 			</ul>
 		</div><!-- .site-info -->
