@@ -37,10 +37,15 @@ Theme Name: uri2016
 }
 
 .front .news .primary figure {
+	display: table;
 	float: left;
 	margin: 0 1em 0 0;
 	img {
 		display: block;
+	}
+	figcaption {
+		display: table-caption;
+		caption-side: bottom;
 	}
 	@include device(phone) {
 		float: none;
