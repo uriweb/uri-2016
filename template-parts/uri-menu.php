@@ -98,7 +98,7 @@
 					<figure class="nav-figure">
 						<a href="http://web.uri.edu/campusrec/facilityreservations/"><img src="<?php print get_template_directory_uri(); ?>/img/nav/athletics.jpg" alt="" width="238" height="210" /></a>
 					</figure>
-					<div class="nav-feature">Explore the <a href="http://web.uri.edu/campusrec/facilityreservations/">Atheletic Facilities</a>.</div>
+					<div class="nav-feature">Explore the <a href="http://web.uri.edu/campusrec/facilityreservations/">Athletic Facilities</a>.</div>
 				</div>
 			</li>
 			<li class="parentcat"><a href="http://web.uri.edu/researchecondev/">Research &amp; Outreach</a>
