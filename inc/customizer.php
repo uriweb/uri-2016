@@ -36,6 +36,7 @@ function uri2016_customize_register( $wp_customize ) {
 			'capability' => 'edit_theme_options',
 			'settings' => 'header_bg_color',
 			'priority' => 10,
+			'palette' => array('#404040','#002147','#aad1ff','#d0a627','#f9edaf')
 		) 
 	));
 	

@@ -154,7 +154,7 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
-figcaption {
+figcaption, .wp-caption-dd {
 	background-color: $light-tint;
 	font-family: $sans;
 	margin: 0 !important;

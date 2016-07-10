@@ -50,7 +50,6 @@
 	} );
 
 	wp.customize( 'header_bg_color', function( value ) {
-			console.log( 'hi' );
 		value.bind( function( to ) {
 			console.log( to );
 			$( '.site-header' ).css( {

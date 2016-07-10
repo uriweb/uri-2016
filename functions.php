@@ -93,7 +93,7 @@ function uri2016_content_width() {
 add_action( 'after_setup_theme', 'uri2016_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -157,7 +157,6 @@ function uri2016_scripts() {
 
 	wp_enqueue_script( 'uri2016-skip-link-focus-fix', $theme . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'uri-next', $theme . '/js/uri-next.js', array(), '20160510', true );
-
 	wp_enqueue_script( 'uri-search', $theme . '/js/uri-search.js', array(), '20160510', true );
 
 
@@ -183,14 +182,18 @@ function uri2016_typekit_inline() {
 }
 add_action( 'wp_head', 'uri2016_typekit_inline' );
 
+
+
 /**
- * Replace footer credits for JetPack Inifite Scroll
+ * Replace footer credits for JetPack Infinite Scroll
  */
 function uri2016_infinite_scroll_credit() {
     $content = '';
     return $content;
 }
 add_filter('infinite_scroll_credit','uri2016_infinite_scroll_credit');
+
+
 
 /**
  * Runs a custom query for the experts page
@@ -209,18 +212,8 @@ add_action( 'pre_get_posts', 'uri2016_experts_page');
 
 
 /**
- * Adds custom css to the admin section so that not all text areas are the same height.
+ * Limit the number of posts per page on archives to the same as the posts per page setting
  */
-function uri2016_custom_admin_styles() {
-  echo '<style>
-    .wp-admin .field textarea {
-      min-height: 0;
-    } 
-  </style>';
-}
-add_action('admin_head', 'uri2016_custom_admin_styles');
-
-
 function uri2016_limit_posts_per_archive_page() {
 	$posts_per_page = get_option('posts_per_page');
 	if ( is_category() )
@@ -231,6 +224,10 @@ add_filter('pre_get_posts', 'uri2016_limit_posts_per_archive_page');
 
 
 
+/**
+ * Adds an image class of "no-hang' to images that are right aligned, 
+ * but aren't sufficiently wide to "look good"
+ */
 function uri2016_add_image_class($class, $id, $align, $size) {
 	if($size[0] < 250) {
 		$class .= ' no-hang ' . print_r($id, TRUE);
@@ -259,8 +256,6 @@ function uri2016_replace_wp_caption_shortcode() {
 add_action( 'after_setup_theme', 'uri2016_replace_wp_caption_shortcode' );
 
 
-
-
 /**
  * Add the new class to the caption.
  *
@@ -276,59 +271,6 @@ function uri2016_caption_shortcode( $attr, $content = NULL ) {
 }
 
 
-
-
-
-
-/**
- * Display navigation to next/previous set of posts when applicable.
- * Based on paging nav function from Twenty Fourteen
- */
-
-function uri2016_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
-
-	$paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
-	$pagenum_link = html_entity_decode( get_pagenum_link() );
-	$query_args   = array();
-	$url_parts    = explode( '?', $pagenum_link );
-
-	if ( isset( $url_parts[1] ) ) {
-		wp_parse_str( $url_parts[1], $query_args );
-	}
-
-	$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
-	$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
-
-	$format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
-	$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
-
-	// Set up paginated links.
-	$links = paginate_links( array(
-		'base'     => $pagenum_link,
-		'format'   => $format,
-		'total'    => $GLOBALS['wp_query']->max_num_pages,
-		'current'  => $paged,
-		'mid_size' => 3,
-		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '&larr; Previous', 'uri2016' ),
-		'next_text' => __( 'Next &rarr;', 'uri2016' ),
-		'type'      => 'list',
-	) );
-
-	if ( $links ) :
-
-	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'uri2016' ); ?></h1>
-			<?php echo $links; ?>
-	</nav><!-- .navigation -->
-	<?php
-	endif;
-}
 
 /**
  * Customize the "Read More" link that shows up at the end of excerpts
@@ -369,6 +311,16 @@ add_action( 'pre_get_posts', 'uri2016_archive_meta_query', 1 );
 
 
 
+
+/**
+ * Implement some admin-side customizations
+ */
+require get_template_directory() . '/inc/admin.php';
+
+/**
+ * Implement the Pagination feature.
+ */
+require get_template_directory() . '/inc/pagination.php';
 
 /**
  * Implement the Custom Header feature.
