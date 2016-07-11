@@ -13,9 +13,9 @@
 		$additional_classes[] = 'excerpt';
 	}
 
-	$publication_name = get_field( 'publication_name', $post->ID );
-	$url = get_field( 'url', $post->ID );
-	$date = get_field( 'date', $post->ID );
+	$publication_name = uri2016_get_field( 'publication_name', $post->ID );
+	$url = uri2016_get_field( 'url', $post->ID );
+	$date = uri2016_get_field( 'date', $post->ID );
 	$date = date( 'M j, Y', strtotime( $date ) );
 
 ?>

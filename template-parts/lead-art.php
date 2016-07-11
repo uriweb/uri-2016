@@ -24,7 +24,7 @@
 	?>
 		<div class="lead-video">
 			<figure>
-			<?php print get_field( 'embed_code', $post->ID ); ?>
+			<?php print uri2016_get_field( 'embed_code', $post->ID ); ?>
 			</figure>
 		</div>
 

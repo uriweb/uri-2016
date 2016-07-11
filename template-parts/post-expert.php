@@ -35,10 +35,11 @@
 
 
 			if( is_single() ) {
-				$position = get_field( 'position', $post->ID );
-				$telephone = get_field( 'telephone', $post->ID );
-				$email = get_field( 'email', $post->ID );
-				$links = get_field( 'links', $post->ID );
+				$position = uri2016_get_field( 'position', $post->ID );
+				$telephone = uri2016_get_field( 'telephone', $post->ID );
+				$email = uri2016_get_field( 'email', $post->ID );
+				$links = uri2016_get_field( 'links', $post->ID );
+				
 				?>
 					<dl class="experts-details">
 

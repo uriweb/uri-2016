@@ -140,7 +140,7 @@ function uri2016_media_contact($post) {
 		return FALSE;
 	}
 	
-	$field = get_field( 'media_contact', $post->ID );
+	$field = uri2016_get_field( 'media_contact', $post->ID );
 
   if ( !empty( $field ) ) {
     echo $field;
@@ -192,7 +192,7 @@ function uri2016_post_navigation(){
 
 
 function uri2016_get_media_contacts($post){
-	$media_contact_ids = get_field( 'media_contact', $post->ID);
+	$media_contact_ids = uri2016_get_field( 'media_contact', $post->ID);
 	if(is_numeric($media_contact_ids)) {
 		$media_contact_ids = array($media_contact_ids);
 	}
@@ -201,9 +201,9 @@ function uri2016_get_media_contacts($post){
 		foreach($media_contact_ids as $id) {
 			$media_contacts[] = array(
 				'name' => get_the_title( $id ),
-				'telephone' => get_field( 'last_name', $id ),
-				'telephone' => get_field( 'telephone', $id ),
-				'email' => get_field( 'email', $id )
+				'telephone' => uri2016_get_field( 'last_name', $id ),
+				'telephone' => uri2016_get_field( 'telephone', $id ),
+				'email' => uri2016_get_field( 'email', $id )
 			);
 		}
 	}

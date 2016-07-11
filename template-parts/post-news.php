@@ -13,7 +13,7 @@
 		$additional_classes[] = 'excerpt';
 	}
 	
-	$smbv = get_field( 'show_the_media_box', $post->ID );
+	$smbv = uri2016_get_field( 'show_the_media_box', $post->ID );
 	if( ! empty( $smbv ) && is_single() ) {
 		$show_media_box = TRUE;
 	}
@@ -21,7 +21,7 @@
 	$media_contacts = uri2016_get_media_contacts($post);
 	
 	// get the deck; empty it if it's just a copy of the title.
-	$deck = get_field( 'deck', $post->ID );
+	$deck = uri2016_get_field( 'deck', $post->ID );
 	if( $deck == get_the_title() ) {
 		$deck = '';
 	}

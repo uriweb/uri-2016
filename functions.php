@@ -312,6 +312,21 @@ function uri2016_archive_meta_query( $query ) {
 add_action( 'pre_get_posts', 'uri2016_archive_meta_query', 1 );
 
 
+/**
+ * Eliminate front-end dependency of ACF module
+ * @todo: implement the $single functionality for parity with ACF's get_field()
+ */
+function uri2016_get_field( $field_name, $post_id, $single=FALSE ) {
+	$post_meta = get_post_meta( $post_id, $field_name, $single );
+
+	if(count($post_meta) == 1) {
+		return $post_meta[0];
+	} else {
+		return NULL;
+	}
+
+}
+
 
 
 /**

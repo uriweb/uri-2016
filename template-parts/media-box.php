@@ -1,10 +1,12 @@
 <?php
 	$media_contacts = uri2016_get_media_contacts($post);
-	$attachment = get_field( 'attachment', $post->ID );
+	$attachment = uri2016_get_field( 'attachment', $post->ID );
 	//echo '<pre>', print_r($attachment, TRUE), '</pre>';
-	$extension = explode( '.', $attachment['url'] );
-	$extension = $extension[count($extension)-1];
-	$title = $attachment['title'] . ' (' . $extension . ')';
+	if( ! empty( $attachment ) ) {
+		$extension = explode( '.', $attachment['url'] );
+		$extension = $extension[count($extension)-1];
+		$title = $attachment['title'] . ' (' . $extension . ')';
+	}
 ?>
 
 <aside class="media-contact">
