@@ -225,7 +225,9 @@ Theme Name: uri2016
 		column-count: 1;
 	}
 }
-.front div.lww { /** description, image, and location **/
+.front div.lww,
+.front div.lwd,
+.front div.lwl { /** description, image, and location **/
 	display: none !important;
 }
 .front div.lww .lwd {
