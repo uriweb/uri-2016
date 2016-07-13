@@ -328,6 +328,43 @@ function uri2016_get_field( $field_name, $post_id, $single=FALSE ) {
 }
 
 
+function uri2016_add_twitter_cards() {
+	global $post;
+	if( is_single() || is_page() ) {
+		$tc_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		$tc_image_thumb = $tc_image[0];
+		if( empty( $tc_image_thumb ) ) {
+			$tc_image_thumb = 'http://today.uri.edu/wp-content/uploads/2016/06/URI-Wordmark.png';
+		}
+		$title = get_the_title();
+		if( empty ( $title) ) { $title = 'URI Today'; }
+		
+		$excerpt = get_the_excerpt();
+		// since the excerpt is just about always empty...
+		if( empty ( $excerpt ) ) {
+			if( strpos( $post->post_content, '<!--more' ) !== FALSE && 1==2) {
+				$bits = explode('<!--more', $post->post_content);
+			} else {
+				$bits = explode( "\n", wordwrap( $post->post_content, 200 ));
+			}
+			$excerpt = strip_tags($bits[0]);
+			$excerpt = str_replace('"', '&quot;', $excerpt);
+			$excerpt = trim($excerpt);
+		}
+		
+		?>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@universityofri" />
+<meta name="twitter:creator" content="@universityofri" />
+<meta property="og:url" content="<?php echo get_permalink(); ?>" />
+<meta property="og:title" content="<?php echo $title; ?>" />
+<meta property="og:description" content="<?php echo $excerpt; ?>" />
+<?php if( $tc_image_thumb ): ?><meta property="og:image" content="<?php echo $tc_image_thumb; ?>" /><?php endif;
+	}
+}
+
+add_action('wp_head', 'uri2016_add_twitter_cards');
+
 
 /**
  * Implement some admin-side customizations
