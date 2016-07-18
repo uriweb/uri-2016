@@ -11,10 +11,16 @@
 	@include device(phone) {
 		height: 8em;
 	}
+	@include device(bigphone) {
+		height: 8.5em;
+	}
 }
 .uri-branding h1 {
 	line-height: 0;
 	margin-top: .75rem;
+	@include device(bigphone) {
+		margin: .75rem 0 0;
+	}
 }
 .uri-branding h1 a {
 	/*background: transparent url(img/uri-logo.svg) 0 0 no-repeat;*/
@@ -53,13 +59,24 @@
 .uri-branding h1 a:hover b {
 	color: $accent-light;
 }
+/** SVG Version of logo **/
+#uri-logo {
+	@include device(phone) {
+		width: 170px;
+		margin-left: 4px;
+	}
+	@include device(bigphone) {
+		width: 190px;
+		margin-left: 4px;
+	}
+}
 
 .think-big-we-do {
 	background: transparent url(img/think-big-we-do.png) 0 0 no-repeat;
 	background-size: contain;
 	float: right;
 	height: 87px;
-	margin-top: -40px;
+	margin-top: -38px;
 	position: relative;
 	text-indent: -999em;
 	width: 202px;
@@ -69,7 +86,7 @@
 	}
 	@include device(bigphone) {
 		background-size: 75%;
-		margin-top: -31px;
+		margin-top: -16px;
 	}
 }
 .site-header {
