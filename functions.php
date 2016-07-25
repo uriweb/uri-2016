@@ -339,7 +339,8 @@ function uri2016_add_twitter_cards() {
 		$title = get_the_title();
 		if( empty ( $title) ) { $title = 'URI Today'; }
 		
-		$excerpt = get_the_excerpt();
+		//$excerpt = get_the_excerpt($post);
+		$excerpt = '';
 		// since the excerpt is just about always empty...
 		if( empty ( $excerpt ) ) {
 			if( strpos( $post->post_content, '<!--more' ) !== FALSE && 1==2) {
