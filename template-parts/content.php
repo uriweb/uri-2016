@@ -19,6 +19,10 @@
 
 		get_template_part( 'template-parts/post-news' );
 
+	} elseif( in_array( 'category-features', get_post_class($post->ID) ) ) {
+
+		get_template_part( 'template-parts/post-features' );
+
 	} else {
 
 		get_template_part( 'template-parts/post' );
