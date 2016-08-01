@@ -327,14 +327,23 @@ function uri2016_get_field( $field_name, $post_id, $single=FALSE ) {
 }
 
 
-function uri2016_add_twitter_cards() {
+function uri2016_open_graph() {
 	global $post;
+	$summary_type = 'summary';
 	if( is_single() || is_page() ) {
 		$tc_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		
+		// use a larger image in twitter card if the image is wider than it is tall
+		$landscape = ($tc_image[1] > $tc_image[2]);
+		if($landscape === TRUE) {
+			$summary_type = 'summary_large_image';
+		}
+		
 		$tc_image_thumb = $tc_image[0];
 		if( empty( $tc_image_thumb ) ) {
 			$tc_image_thumb = 'http://today.uri.edu/wp-content/uploads/2016/06/URI-Wordmark.png';
 		}
+		
 		$title = get_the_title();
 		if( empty ( $title) ) { $title = 'URI Today'; }
 		
@@ -353,7 +362,7 @@ function uri2016_add_twitter_cards() {
 		}
 		
 		?>
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="<?php print $summary_type; ?>" />
 <meta name="twitter:site" content="@universityofri" />
 <meta name="twitter:creator" content="@universityofri" />
 <meta property="og:url" content="<?php echo get_permalink(); ?>" />
@@ -363,7 +372,7 @@ function uri2016_add_twitter_cards() {
 	}
 }
 
-add_action('wp_head', 'uri2016_add_twitter_cards');
+add_action('wp_head', 'uri2016_open_graph');
 
 
 /**
