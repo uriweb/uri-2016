@@ -20,10 +20,12 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php /*
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
-
+	*/ ?>
+	
 	<footer class="entry-footer">
 		<?php uri2016_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

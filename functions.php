@@ -367,6 +367,27 @@ add_action('wp_head', 'uri2016_add_twitter_cards');
 
 
 /**
+ * Exclude "links to" posts from the results
+ * This avoids duplication and only shows the posts that are linked to.
+ *
+ * @param WP_Query $query Existing query object
+ * @return WP_Query Amended query object
+ */
+function uri2016_search_filter( $query ) {
+	if ( $query->is_search && !is_admin() ) {
+		$meta_query[] = array(
+			'key' => '_links_to',
+			'compare' => 'NOT EXISTS',
+		);
+		$query->set('meta_query',$meta_query);
+	}
+	return $query;
+}
+add_filter( 'pre_get_posts', 'uri2016_search_filter' );
+
+
+
+/**
  * Implement some admin-side customizations
  */
 require get_template_directory() . '/inc/admin.php';

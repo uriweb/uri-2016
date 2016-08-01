@@ -59,7 +59,7 @@ function uri2016_entry_footer() {
 // 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		print uri2016_tag_list();
+		//print uri2016_tag_list();
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
