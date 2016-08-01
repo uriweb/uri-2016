@@ -331,17 +331,17 @@ function uri2016_open_graph() {
 	global $post;
 	$summary_type = 'summary';
 	if( is_single() || is_page() ) {
-		$tc_image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 		
 		// use a larger image in twitter card if the image is wider than it is tall
-		$landscape = ($tc_image[1] > $tc_image[2]);
+		$landscape = ($image[1] > $image[2]);
 		if($landscape === TRUE) {
 			$summary_type = 'summary_large_image';
 		}
 		
-		$tc_image_thumb = $tc_image[0];
-		if( empty( $tc_image_thumb ) ) {
-			$tc_image_thumb = 'http://today.uri.edu/wp-content/uploads/2016/06/URI-Wordmark.png';
+		$image_thumb = $image[0];
+		if( empty( $image_thumb ) ) {
+			$image_thumb = 'http://today.uri.edu/wp-content/uploads/2016/06/URI-Wordmark.png';
 		}
 		
 		$title = get_the_title();
@@ -368,7 +368,7 @@ function uri2016_open_graph() {
 <meta property="og:url" content="<?php echo get_permalink(); ?>" />
 <meta property="og:title" content="<?php echo $title; ?>" />
 <meta property="og:description" content="<?php echo $excerpt; ?>" />
-<?php if( $tc_image_thumb ): ?><meta property="og:image" content="<?php echo $tc_image_thumb; ?>" /><?php endif;
+<?php if( $image_thumb ): ?><meta property="og:image" content="<?php echo $image_thumb; ?>" /><?php endif;
 	}
 }
 
