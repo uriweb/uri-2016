@@ -41,12 +41,16 @@
 				print '</hgroup>';
 			} else {
 				//print '<hgroup>';
+				// show the lead art
+				get_template_part( 'template-parts/lead-art' );
+
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				//if( ! empty( $deck ) ) {
 				//	print '<h3 class="deck">' . $deck . '</h2>';
 				//}
 				//print '</hgroup>';
 			}
+			uri2016_posted_on();
 		?>
 
 	</header><!-- .entry-header -->
@@ -54,17 +58,17 @@
 	<div class="entry-content">
 		<?php
 
-			// show the lead art
-			get_template_part( 'template-parts/lead-art' );
-
-
-			// show the media contact / journalists' box
-			if($show_media_box) {
-				get_template_part( 'template-parts/media-box' );
-			}
-
-
 			if( is_single() ) {
+
+				// show the lead art
+				get_template_part( 'template-parts/lead-art' );
+
+
+				// show the media contact / journalists' box
+				if($show_media_box) {
+					get_template_part( 'template-parts/media-box' );
+				}
+
 
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
@@ -77,13 +81,13 @@
 				) );
 
 			} else {
-					$content = get_the_content();
-					$content = strip_tags($content, '<a><strong><em><p><div>');
-					$content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 		
-					$content = preg_replace("/<iframe[^>]+\>/i", "(video) ", $content);             
-					$content = apply_filters('the_content', $content);
-					$content = str_replace(']]>', ']]>', $content);
-					echo $content;
+// 					$content = get_the_content();
+// 					$content = strip_tags($content, '<a><strong><em><p><div>');
+// 					$content = preg_replace("/<img[^>]+\>/i", "(image) ", $content); 		
+// 					$content = preg_replace("/<iframe[^>]+\>/i", "(video) ", $content);             
+// 					$content = apply_filters('the_content', $content);
+// 					$content = str_replace(']]>', ']]>', $content);
+// 					echo $content;
 
 			}
 		?>

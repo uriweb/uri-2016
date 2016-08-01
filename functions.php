@@ -7,7 +7,6 @@
  * @package uri2016
  */
 
-if ( ! function_exists( 'uri2016_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -41,6 +40,7 @@ function uri2016_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 300, 300, FALSE );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -77,7 +77,6 @@ function uri2016_setup() {
 		'default-image' => '',
 	) ) );
 }
-endif;
 add_action( 'after_setup_theme', 'uri2016_setup' );
 
 /**

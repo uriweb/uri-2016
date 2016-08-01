@@ -6,8 +6,8 @@
 		<div class="lead-art inline-media">
 			<figure>
 			<?php
-				$width = ( is_single() ) ? 1200 : 400 ;
-				the_post_thumbnail(array($width, NULL));
+				$width = ( is_single() ) ? 1200 : 300 ;
+				the_post_thumbnail( array( $width, NULL ) );
 			?>
 			<?php
 			$figcaption = uri2016_get_thumbnail_caption($post);

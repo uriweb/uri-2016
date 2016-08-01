@@ -45,9 +45,15 @@ div.lead-video {
 }
 
 .excerpt .lead-art {
-	margin: 1.25em 1.5em 1em 0;
-	max-width: 35%;
+	margin: 0 1.5rem .5rem 0;
+	max-width: 25%;
 	float: left;
+}
+.excerpt h2 {
+	font-size: 1.5rem;
+}
+.excerpt .lead-art+h2 {
+	clear: none;
 }
 
 .inline-media,
