@@ -3,8 +3,7 @@
 
 	// show the lead art
 	if ( has_post_thumbnail() && ! get_post_format( $post->ID ) == 'video') { // check if the post has a Post Thumbnail assigned to it.
-	
-		if ( is_single() ) {
+		if ( is_single() && in_category( 'news' ) ) {
 			$image_id = get_post_thumbnail_id( $post->ID );
 			$image = wp_get_attachment_image_src( $image_id, 'full' );
 			$link_to_fullsize = TRUE;
