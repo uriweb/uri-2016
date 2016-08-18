@@ -397,6 +397,41 @@ add_filter( 'pre_get_posts', 'uri2016_search_filter' );
 
 
 /**
+ * Customize the login screen logo
+ */
+function uri2016_login_logo() {
+	?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-size: 100%;
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/uri-today-login.svg);
+			height: 28px;
+			padding-bottom: .5rem;
+			width: 204px;
+		}
+	</style>
+	<?php
+}
+add_action( 'login_enqueue_scripts', 'uri2016_login_logo' );
+
+/**
+ * Customize the login screen link URL
+ */
+function uri2016_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'uri2016_login_logo_url' );
+
+/**
+ * Customize the login screen link text
+ */
+function uri2016_login_logo_url_title() {
+	return get_bloginfo( 'name' );
+}
+add_filter( 'login_headertitle', 'uri2016_login_logo_url_title' );
+
+
+/**
  * Implement some admin-side customizations
  */
 require get_template_directory() . '/inc/admin.php';
