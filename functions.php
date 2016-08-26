@@ -342,6 +342,7 @@ function uri2016_open_graph() {
 		$image_thumb = $image[0];
 		if( empty( $image_thumb ) ) {
 			$image_thumb = 'http://today.uri.edu/wp-content/uploads/2016/06/URI-Wordmark.png';
+			$summary_type = 'summary_large_image';
 		}
 		
 		$title = get_the_title();
