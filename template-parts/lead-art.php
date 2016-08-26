@@ -27,14 +27,14 @@
 				$width = ( is_single() ) ? 1200 : 300 ;
 				the_post_thumbnail( array( $width, NULL ) );
 			?>
+			<?php if ( $link_to_fullsize || $link_to_article): ?>
+			</a>
+			<?php endif; ?>
 			<?php
 			$figcaption = uri2016_get_thumbnail_caption($post);
 			if ( is_single() && !empty( $figcaption ) ):
 			?>
 			<figcaption><?php print $figcaption; ?></figcpation>
-			<?php endif; ?>
-			<?php if ( $link_to_fullsize || $link_to_article): ?>
-			</a>
 			<?php endif; ?>
 			</figure>
 		</div>
