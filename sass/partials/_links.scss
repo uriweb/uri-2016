@@ -57,6 +57,14 @@ a:active {
 }
 
 
+/**
+ * suppress transitions on lightbox
+ * with a duration of 0, there is no animation
+ */
+#lightbox #hoverNav a {
+	@include fade(all, 0);
+}
+
  
 
 .uri-branding a, #nav a, .main-navigation a, #wpadminbar a {

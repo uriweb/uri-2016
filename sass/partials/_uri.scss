@@ -280,6 +280,13 @@ aside.media-contact {
 	h4, p {
 		margin-top: 0;
 	}
+	
+	.previous {
+		display: flex;
+		img.wp-post-image {
+			margin-right: .75em;
+		}
+	}
 
 	&.shown {
 		margin-top: 2rem;

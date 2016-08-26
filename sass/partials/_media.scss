@@ -73,6 +73,28 @@ figure.alignright.no-hang {
 	margin-right: 0 !important;
 }
 
+.single .category-news figure>a {
+	position: relative;
+}
+.single .category-news figure>a:after {
+	background: #fff url(img/zoom.svg) 50% 50% no-repeat;
+	background-size: 50%;
+	color: #fff;
+	content: '.';
+	display: block;
+	height: 3.5rem;
+	width: 3.5rem;
+	position: absolute;
+	bottom: .5rem;
+	left: .5rem;
+	opacity: .3;
+	@include fade(opacity, 250ms);
+}
+.single .category-news figure>a:hover:after {
+	opacity: .6;
+}
+
+
 .simplePullQuote {
 	box-shadow: none !important;
 	border: 6px solid $accent !important;
