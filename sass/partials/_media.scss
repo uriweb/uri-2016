@@ -69,6 +69,9 @@ div.lead-video {
 figure.alignright {
 	@extend .hanging-right;
 }
+iframe.wp-embedded-content {
+	@extend .hanging-right;
+}
 figure.alignright.no-hang {
 	margin-right: 0 !important;
 }
