@@ -251,6 +251,26 @@ Theme Name: uri2016
 	float: none;
 }
 
+.front .events-cards {
+	.localist-widget-hl ol,
+	.localist-widget-hl .event-title {
+		font-family: $sans;
+		font-size: .875rem;
+	}
+	
+	.localist-widget-hl .event-card .event-short-date {
+		background-color: $link-color;
+		font-family: $sans;
+	}
+	.localist-widget-hl .event-list .event-overview .content {
+		color: $text;
+		font-family: $serif;
+	}
+	.localist-widget-hl .event-detail-title {
+		font-size: 1rem;
+	}
+}
+
 /** zigzag background **/
 section#text-5, section#uri_featured_posts_widget-11 {	
 	background: $light-light-tint;
