@@ -8,7 +8,7 @@
 					<ul>
 						<li><a href="//uri.edu">URI Homepage</a></li>
 						<li><a href="//web.uri.edu/about/services/">A-Z (things)</a></li>
-						<li><a href="http://directory.uri.edu/directory.php">Directory (people)</a></li>
+						<li><a href="http://directory.uri.edu">Directory (people)</a></li>
 						<li><a href="//map.uri.edu">Maps</a></li>
 						<li><a href="//web.uri.edu/about/contact/">Contact Us</a></li>
 						<li><a href="//web.uri.edu/alert/">Alerts</a></li>
@@ -23,7 +23,7 @@
 						<li><a href="http://web.uri.edu/about/maps-and-directions/">Getting Here</a></li>
 						<li><a href="http://web.uri.edu/about/university-leadership/">University Leadership</a></li>
 						<li><a href="http://web.uri.edu/about/our-faculty/">Our Faculty</a></li>
-						<li><a href="http://directory.uri.edu/directory.php">Directory</a></li>
+						<li><a href="http://directory.uri.edu">Directory</a></li>
 						<li><a href="http://web.uri.edu/about/contact/">Contact Us</a></li>
 						<li><a href="http://web.uri.edu/about/services/">A-Z</a></li>
 					</ul>

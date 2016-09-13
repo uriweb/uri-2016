@@ -19,7 +19,7 @@
 			<div class="copyright">Copyright &copy; <a href="//uri.edu">University of Rhode Island</a></div>
 			<ul class="tactical">
 				<li><a href="//web.uri.edu/about/services/">A-Z</a></li>
-				<li><a href="http://directory.uri.edu/directory.php">Directory</a></li>
+				<li><a href="http://directory.uri.edu">Directory</a></li>
 				<li><a href="//map.uri.edu">Maps</a></li>
 				<li><a href="//web.uri.edu/about/contact/">Contact Us</a></li>
 				<li><a href="//web.uri.edu/alert/">Alerts</a></li>
