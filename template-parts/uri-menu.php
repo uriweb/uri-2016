@@ -20,7 +20,7 @@
 					<ul>
 						<li><a href="http://web.uri.edu/about/">About URI</a></li>
 						<li><a href="http://web.uri.edu/about/campuses/">Campuses</a></li>
-						<li><a href="http://web.uri.edu/about/maps-and-directions/">Getting Here</a></li>
+						<li><a href="http://web.uri.edu/visit/">Visit URI</a></li>
 						<li><a href="http://web.uri.edu/about/university-leadership/">University Leadership</a></li>
 						<li><a href="http://web.uri.edu/about/our-faculty/">Our Faculty</a></li>
 						<li><a href="http://directory.uri.edu">Directory</a></li>

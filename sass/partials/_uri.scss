@@ -282,9 +282,18 @@ aside.media-contact {
 	}
 	
 	.previous {
-		display: flex;
 		img.wp-post-image {
 			margin-right: .75em;
+			max-height: 100px;
+			display: block;
+			float: left;
+		}
+		&:after {
+			content:'.';
+			display: block;
+			clear: left;
+			height: 0;
+			visibility: hidden;
 		}
 	}
 
