@@ -276,8 +276,6 @@ function uri2016_caption_shortcode( $attr, $content = NULL ) {
  * Customize the "Read More" link that shows up at the end of excerpts
  */
 function uri2016_modify_read_more_link($more_link, $more_link_text) {
-	echo '<pre>', print_r(get_defined_vars(), TRUE), '</pre>';
-	return htmlentities($more_link) . ' ' . $more_link_text;
 	return '<a class="more-link" href="' . get_permalink() . '">More ...</a>';
 }
 add_filter( 'the_content_more_link', 'uri2016_modify_read_more_link', 10, 2 );
