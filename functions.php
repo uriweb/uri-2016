@@ -158,7 +158,6 @@ function uri2016_scripts() {
 
 	wp_enqueue_script( 'uri2016-skip-link-focus-fix', $theme . '/js/skip-link-focus-fix.js', array(), $cache_buster, true );
 	wp_enqueue_script( 'uri-next', $theme . '/js/uri-next.js', array(), $cache_buster, true );
-	wp_enqueue_script( 'uri-search', $theme . '/js/uri-search.js', array(), $cache_buster, true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -276,10 +275,12 @@ function uri2016_caption_shortcode( $attr, $content = NULL ) {
 /**
  * Customize the "Read More" link that shows up at the end of excerpts
  */
-function uri2016_modify_read_more_link() {
+function uri2016_modify_read_more_link($more_link, $more_link_text) {
+	echo '<pre>', print_r(get_defined_vars(), TRUE), '</pre>';
+	return htmlentities($more_link) . ' ' . $more_link_text;
 	return '<a class="more-link" href="' . get_permalink() . '">More ...</a>';
 }
-add_filter( 'the_content_more_link', 'uri2016_modify_read_more_link' );
+add_filter( 'the_content_more_link', 'uri2016_modify_read_more_link', 10, 2 );
 
 
 /**
