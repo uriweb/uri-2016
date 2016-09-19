@@ -44,7 +44,7 @@ function uri2016_customize_register( $wp_customize ) {
 	// header text tinted background
 	$wp_customize->add_setting( 'header_text_tint', array(
 		'default' => '1',
-		'sanitize_callback' => '',
+		'sanitize_callback' => 'uri2016_validate_checkbox',
  		'type' => 'theme_mod',
  		'transport' => 'postMessage'
 	) );
@@ -69,6 +69,18 @@ function uri2016_customize_register( $wp_customize ) {
 	
 }
 add_action( 'customize_register', 'uri2016_customize_register' );
+
+
+/**
+ * Sanitize input from a checkbox.  It'll be 0 or 1.
+ *
+ * @param mixed $value
+ * @return int
+ */
+function uri2016_validate_checkbox($value) {
+	return filter_var($value, FILTER_SANITIZE_NUMBER_INT);
+}
+
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
