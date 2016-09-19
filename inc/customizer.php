@@ -31,7 +31,7 @@ function uri2016_customize_register( $wp_customize ) {
 		'header_bg_color',
 		array(
 			'label'    => __( 'Header Background Color', 'uri2016' ),
-			'description' => __( 'This color is only seen when there is no header image.'),
+			'description' => __( 'This color is only seen when there is no header image.', 'uri2016' ),
 			'section'  => 'header_image',
 			'capability' => 'edit_theme_options',
 			'settings' => 'header_bg_color',
@@ -54,7 +54,7 @@ function uri2016_customize_register( $wp_customize ) {
 		'header_text_tint',
 		array(
 			'label'    => __( 'Tint the Header Text Background', 'uri2016' ),
-			'description' => __( 'Darkens the area around header text.'),
+			'description' => __( 'Darkens the area around header text.', 'uri2016'),
 			'section'  => 'header_image',
 			'capability' => 'edit_theme_options',
 	 		'type' => 'checkbox',
