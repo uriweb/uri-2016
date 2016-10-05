@@ -4,7 +4,7 @@
 
 	// show the lead art
 	if ( has_post_thumbnail() && ! get_post_format( $post->ID ) == 'video') { // check if the post has a Post Thumbnail assigned to it.
-		if ( is_single() && in_category( 'news' ) ) {
+		if ( ( is_single() || is_page() ) && in_category( 'news' ) ) {
 			$image_id = get_post_thumbnail_id( $post->ID );
 			$image = wp_get_attachment_image_src( $image_id, 'full' );
 			$link_to_fullsize = TRUE;
@@ -24,7 +24,7 @@
 			<a href="<?php print $url ?>">
 			<?php endif; ?>
 			<?php
-				$width = ( is_single() ) ? 1200 : 300 ;
+				$width = ( is_single() || is_page() ) ? 1200 : 300 ;
 				the_post_thumbnail( array( $width, NULL ) );
 			?>
 			<?php if ( $link_to_fullsize || $link_to_article): ?>
@@ -32,7 +32,7 @@
 			<?php endif; ?>
 			<?php
 			$figcaption = uri2016_get_thumbnail_caption($post);
-			if ( is_single() && !empty( $figcaption ) ):
+			if ( ( is_single() || is_page() ) && !empty( $figcaption ) ):
 			?>
 			<figcaption><?php print $figcaption; ?></figcpation>
 			<?php endif; ?>

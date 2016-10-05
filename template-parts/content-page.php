@@ -16,6 +16,8 @@
 
 	<div class="entry-content">
 		<?php
+			get_template_part( 'template-parts/lead-art' );
+
 			the_content();
 
 			wp_link_pages( array(
