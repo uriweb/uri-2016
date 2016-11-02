@@ -15,7 +15,6 @@
 
 	<footer id="colophon" class="site-footer site" role="contentinfo">
 		<div class="site-info">
-			<div class="feedback">Send URI Today website feedback to <a href="mailto:jpennypacker@uri.edu">John Pennypacker</a> or call 874-4890.</a></div>
 			<div class="copyright">Copyright &copy; <a href="//uri.edu">University of Rhode Island</a></div>
 			<ul class="tactical">
 				<li><a href="//web.uri.edu/about/services/">A-Z</a></li>
