@@ -133,7 +133,7 @@ add_action( 'widgets_init', 'uri2016_widgets_init' );
 function uri2016_scripts() {
 	$theme = get_template_directory_uri();
 
-	$cache_buster = '20160812';
+	$cache_buster = '20161005';
 	$cache_buster = NULL;
 
 	wp_register_script( 'wp_environment', null);
@@ -340,7 +340,7 @@ function uri2016_open_graph() {
 		
 		$image_thumb = $image[0];
 		if( empty( $image_thumb ) ) {
-			$image_thumb = 'http://today.uri.edu/wp-content/uploads/2016/06/URI-Wordmark.png';
+			$image_thumb = 'https://today.uri.edu/wp-content/uploads/2016/11/uri-logo-wordmark.png';
 			$summary_type = 'summary_large_image';
 		}
 		
