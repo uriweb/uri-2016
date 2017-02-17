@@ -133,8 +133,8 @@ add_action( 'widgets_init', 'uri2016_widgets_init' );
 function uri2016_scripts() {
 	$theme = get_template_directory_uri();
 
-	$cache_buster = '20161005';
 	$cache_buster = NULL;
+	//$cache_buster = time();
 
 	wp_register_script( 'wp_environment', null);
 	wp_enqueue_script( 'wp_environment', false, array(), false, true );
