@@ -59,7 +59,7 @@
 						<li><a href="http://web.uri.edu/about/departments/">Colleges, Schools, and Departments</a></li>
 						<li><a href="http://web.uri.edu/career/">Career and Internships</a></li>
 						<li><a href="http://web.uri.edu/prov/">Continuing Education and Certification</a></li>
-						<li><a href="http://web.uri.edu/learningonline">Online Learning</a></li>
+						<li><a href="http://web.uri.edu/online">Online Learning</a></li>
 					</ul>
 					<figure class="nav-figure">
 						<a href="http://web.uri.edu/advising/majors/"><img src="<?php print get_template_directory_uri(); ?>/img/nav/academics.jpg" alt="" width="238" height="210" /></a>

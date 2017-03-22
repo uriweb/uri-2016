@@ -1,0 +1,88 @@
+/** 
+ * Multi-column equal width styles.
+ * Mobile first.
+ */
+.cols {
+	display: flex;
+	flex-wrap: wrap;
+}
+.cols > div {
+	flex: 1;
+}
+.cols.fourths, .cols.fifths, .cols.sixths {
+	display: flex;
+}
+.cols.halves > div {
+	flex-basis: 100%;
+	max-width: 100%;
+}
+.cols.thirds > div {
+	flex-basis: 100%;
+	max-width: 100%;
+}
+.cols.fourths > div, .cols.quarters > div {
+	flex-basis: 50%;
+	max-width: 50%;
+}
+.cols.fifths > div {
+	flex-basis: 50%;
+	max-width: 50%;
+}
+.cols.sixths > div {
+	flex-basis: 50%;
+	max-width: 50%;
+}
+
+
+@media (min-width: 481px) {
+
+	/** 
+	 * Multi-column equal width styles for medium-sized devices
+	 */
+	.cols.halves {
+		display: flex;
+	}
+	.cols.halves > div {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+	.cols.thirds > div {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+	.cols.fourths, .cols.quarters, .cols.fifths, .cols.sixths {
+		display: flex;
+	}
+	.cols.fifths > div, .cols.sixths > div {
+		flex-basis: 33%;
+		max-width: 33%;
+	}
+
+}
+
+@media (min-width: 800px) {
+	.cols.thirds > div {
+		flex-basis: 33%;
+		max-width: 33%;
+	}
+
+}
+
+@media (min-width: 1024px) {
+	/** 
+	 * Multi-column equal width styles for larger screens
+	 */
+	.cols.fourths > div, .cols.quarters > div {
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+	.cols.fifths > div {
+		flex-basis: 20%;
+		max-width: 20%;
+	}
+	.cols.sixths > div {
+		flex-basis: 16.5%;
+		max-width: 16.5%;
+	}
+	
+}

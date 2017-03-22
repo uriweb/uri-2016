@@ -25,7 +25,20 @@
 
 	} else {
 
-		get_template_part( 'template-parts/post' );
+		$category = get_the_category();
+		$cat_parent = 0;
+		$category_parent_id = $category[0]->category_parent;
+		if ( $category_parent_id != 0 ) {
+			$category_parent = get_term( $category_parent_id, 'category' );
+			$cat_parent = $category_parent->slug;
+		}
+		
+		if ( $cat_parent == 'services') {
+			get_template_part( 'template-parts/post-services' );
+		} else {
+			get_template_part( 'template-parts/post' );
+		}
+
 
 	}
 	

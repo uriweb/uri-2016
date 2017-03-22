@@ -10,6 +10,17 @@
 $title = get_the_archive_title();
 get_header();
 
+$category = get_the_category();
+$cat_parent = 0;
+$category_parent_id = $category[0]->category_parent;
+if ( $category_parent_id != 0 ) {
+	$category_parent = get_term( $category_parent_id, 'category' );
+	$cat_parent = $category_parent->slug;
+}
+if ( $cat_parent == 'services') {
+	print uri2016_breadcrumbs();
+}
+
 ?>
 
 

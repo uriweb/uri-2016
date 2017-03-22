@@ -1,0 +1,60 @@
+/*
+Theme Name: uri2016
+*/
+
+.service-main {
+	margin-right: 0;
+}
+
+.categories-wrapper, .self-service-wrapper {
+	border: 2px solid $light-tint;
+	border-width: 2px 0;
+ 	margin-bottom: 3rem;
+}
+
+div.category-block {
+	margin: 0 0 1em;
+}
+div.category-block {
+	padding: 0 3% 0 0;
+}
+
+
+
+.self-service h3 {
+}
+
+div.category-block ul, .self-service ul {
+	font-family: $sans;
+	margin-left: 0;
+	padding-left: 1.5em;
+}
+
+.self-service {
+	padding: 0 .5rem;
+}
+
+.breadcrumbs {
+	margin: 0 0 1em; 
+	padding: 0;
+}
+.breadcrumbs li {
+	display: inline-block;
+	font-family: $sans;
+	list-style: none;
+	padding: 0;
+}
+
+.breadcrumbs li:not(:last-of-type) a {
+	margin-right: .5em; 
+}
+.breadcrumbs li:not(:last-of-type):after {
+	margin-right: .5em; 
+	content: '»';
+}
+
+
+.service .button {
+	border-bottom: 0 !important;
+	box-shadow: none !important;
+}
