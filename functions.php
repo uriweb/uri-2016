@@ -469,6 +469,21 @@ function uri2016_login_logo_url_title() {
 add_filter( 'login_headertitle', 'uri2016_login_logo_url_title' );
 
 
+
+// adds the featured image to the RSS feed
+// https://duogeek.com/blog/add-featured-images-as-enclosures-in-wordpress-rss-feeds/
+function uri2016_add_featured_image_in_rss() {
+	$thumbnail_ID = get_post_thumbnail_id( $post->ID );
+	$thumbnail = wp_get_attachment_image_src($thumbnail_ID, array(200, 200));
+
+	$url = ( ! empty( $thumbnail ) ) ? $thumbnail[0] : get_template_directory_uri() . '/img/default/uri-200.png';
+
+	echo "\t" . '<enclosure url="' . $url . '" />' . "\n";
+}
+add_action( 'rss2_item', 'uri2016_add_featured_image_in_rss' );
+
+
+
 /**
  * Include Breadcrumbs
  */

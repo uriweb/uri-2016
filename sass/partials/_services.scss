@@ -7,32 +7,23 @@ Theme Name: uri2016
 }
 
 .categories-wrapper, .self-service-wrapper {
-	border: 2px solid $light-tint;
+	background-color: $light-tint;
+	border: 2px solid $medium-tint;
 	border-width: 2px 0;
  	margin-bottom: 3rem;
+	padding: .5rem;
+	& > div {
+		margin: 0 0 1em;
+		padding: 0 .5rem;
+		ul {
+			font-family: $sans;
+			margin-left: 0;
+			padding-left: 1.5em;
+		}
+	}
 }
 
-div.category-block {
-	margin: 0 0 1em;
-}
-div.category-block {
-	padding: 0 3% 0 0;
-}
 
-
-
-.self-service h3 {
-}
-
-div.category-block ul, .self-service ul {
-	font-family: $sans;
-	margin-left: 0;
-	padding-left: 1.5em;
-}
-
-.self-service {
-	padding: 0 .5rem;
-}
 
 .breadcrumbs {
 	margin: 0 0 1em; 

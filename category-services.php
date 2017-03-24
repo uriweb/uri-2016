@@ -32,6 +32,8 @@ get_header();
 			
 			<h2>Self-Service Resources</h2>
 			
+			<p>Download URI Logos, Templates, Photos, and style guides.</p>
+			
 			<div class="self-service-wrapper cols thirds">
 
 				<div class="self-service">
@@ -53,7 +55,7 @@ get_header();
 				<div class="self-service">
 					<h3>Logos</h3>
 					<ul>
-						<li><a href="http://uriphotography.photoshelter.com/gallery/URI-Logos/G0000n1lWE0SKe9E/1/">Logos</a></li>
+						<li><a href="http://uriphotography.photoshelter.com/gallery/URI-Logos/G0000n1lWE0SKe9E/1/">URI Logos</a></li>
 						<li><a href="https://drive.google.com/drive/folders/0B27sIR84YA5LTG9hUm1HRVlwWUU">125th Anniversary Logos</a></li>
 					</ul>
 				</div>
@@ -63,7 +65,9 @@ get_header();
 
 
 			<h2>Custom Solutions</h2>
-			
+
+			<p>We're here to help beyond templates and guidelines.  We tailor customized solutions to meet your objectives.</p>
+
 			<div class="categories-wrapper cols thirds">
 			
 			<?php
