@@ -96,7 +96,7 @@ get_header();
 					?>
 					<div class="category-block">
 						<h3><a href="<?php print get_category_link( $c->term_id ); ?>"><?php print $c->name; ?></a></h3>
-						<p class="description"><?php print category_description($c->term_id); ?></p>
+						<div class="description"><?php print category_description($c->term_id); ?></div>
 						<?php
 							if( is_array( $posts ) ) {
 								print '<ul>';
