@@ -107,7 +107,7 @@
 						<li><a href="http://web.uri.edu/researchecondev/">Research and Economic Development</a></li>
 						<li><a href="http://web.uri.edu/bec/">Business Engagement Center</a></li>
 						<li><a href="http://web.uri.edu/career/">Experiential Learning</a></li>
-						<li><a href="http://web.uri.edu/riaes/extension/">Cooperative Extension</a></li>
+						<li><a href="http://web.uri.edu/coopext/">Cooperative Extension</a></li>
 						<li><a href="http://web.uri.edu/library/">Libraries</a></li>
 						<li><a href="http://web.uri.edu/graduate-school/">Graduate Studies</a></li>
 					</ul>
