@@ -4,20 +4,52 @@ Theme Name: uri2016
 
 .service-main {
 	margin-right: 0;
+	h1 {
+		text-align: center;
+	}
 }
 
+.services-intro {
+	margin: 0 auto 3rem;
+	max-width: 70%;
+	text-align: center;
+}
+
+
+
+
 .categories-wrapper, .self-service-wrapper {
-	background-color: $light-tint;
+	left: 50%;
  	margin-bottom: 3rem;
-	padding: .5rem;
+	margin-left: -50vw;
+	padding: 2rem 0;
+	position: relative;
+	width: 100vw;
+	
+	header {
+		display: block;
+		margin: 0 auto;
+		max-width: 480px;
+		text-align: center;
+		h2 {
+			margin: 0;
+			padding: 1rem 0 0;
+		}
+		p {
+			margin-top: 0;
+		}
+	}
+
 	& > div {
 		font-family: $sans;
-		margin: 0;
 		padding: 0 1rem 1em;
+		text-align: center;
 		&:nth-child(odd) {
 			
 		}
 		h3 {
+			font-size: 1.375em;
+			font-weight: normal;
 			margin-bottom: .25em;
 		}
 		.description p {
@@ -25,12 +57,29 @@ Theme Name: uri2016
 		}
 		ul {
 			font-family: $sans;
+			margin-top: 1em;
 			margin-left: 0;
-			padding-left: 1.5em;
+			padding-left: 0;
+		}
+		li {
+			list-style: none;
+			margin: 0;
+			a {
+				border-bottom: 1px solid $medium-tint;
+				display: block;
+				margin: 0 1.5rem;
+				padding: 1rem;
+				&:hover {
+					background-color: $light-tint;
+				}
+			}
 		}
 	}
 }
 
+.self-service-wrapper {
+	background-color: $light-light-tint;
+}
 
 
 .breadcrumbs {
@@ -57,3 +106,54 @@ Theme Name: uri2016
 	border-bottom: 0 !important;
 	box-shadow: none !important;
 }
+
+
+
+/** ICONS **/
+.self-service-wrapper {
+	h3 {
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		padding-top: 116px;
+	}
+	.resource-templates h3 {
+		background-image: url(img/services/templates.svg);
+	}
+	.resource-art h3 {
+		background-image: url(img/services/photos.svg);
+		background-size: 76px 95px;
+	}
+	.resource-guides h3 {
+		background-image: url(img/services/logo.svg);
+	}
+}
+.categories-wrapper {
+	h3 {
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		padding-top: 156px;
+	}
+	.advertising h3 {
+		background-image: url(img/services/advertising.svg);
+	}
+	.marketing h3 {
+		background-image: url(img/services/marketing.svg);
+	}
+	.news-and-public-relations h3 {
+		background-image: url(img/services/news.svg);
+	}
+	.photography--video h3 {
+		background-image: url(img/services/photography.svg);
+		background-size: 76px 95px;
+	}
+	.public-policy h3 {
+		background-image: url(img/services/policy.svg);
+	}
+	.social-media h3 {
+		background-image: url(img/services/social-media.svg);
+	}
+	.web-communications h3 {
+		background-image: url(img/services/web.svg);
+	}
+}
+/** END ICONS **/

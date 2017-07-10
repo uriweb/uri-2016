@@ -23,6 +23,19 @@
 
 		get_template_part( 'template-parts/post-features' );
 
+	} elseif( in_array( 'category-contacts', get_post_class($post->ID) ) ) {
+
+		if( ! is_user_logged_in() ) {
+			$wp_query->set_404();
+			status_header(404);
+			nocache_headers();
+			include( get_query_template( '404' ) );
+			die();
+		}
+		echo '<p>Heads up!  This page is a 404 for folks who are not logged in.  See file:<br>
+		' . __FILE__ . '</p>';
+		get_template_part( 'template-parts/post' );
+
 	} else {
 
 		$category = get_the_category();

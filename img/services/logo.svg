@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="177px" height="70px" viewBox="0 0 177 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(-14.000000, -16.000000)">
+            <rect id="Rectangle-1-Copy-2" x="0" y="0" width="205" height="100"></rect>
+            <text id="UNIVERSITY" font-family="TrajanPro-Bold, Trajan Pro" font-size="26.0869565" font-weight="bold" letter-spacing="-0.94202894" fill="#002147">
+                <tspan x="14" y="60">U</tspan>
+                <tspan x="35.284058" y="60" letter-spacing="-0.507246375">N</tspan>
+                <tspan x="59.4811595" y="60" letter-spacing="0.144927531">I</tspan>
+                <tspan x="71.4173913" y="60" letter-spacing="0.507246375">V</tspan>
+                <tspan x="90.8115942" y="60" letter-spacing="-0.507246375">E</tspan>
+                <tspan x="106.791304" y="60" letter-spacing="0.0724637657">R</tspan>
+                <tspan x="126.168116" y="60" letter-spacing="-0.0724637657">SI</tspan>
+                <tspan x="152.997101" y="60" letter-spacing="0.724637687">T</tspan>
+                <tspan x="172.243478" y="60">Y</tspan>
+            </text>
+            <text id="OF-RHODE-ISLAND" font-family="TrajanPro-Bold, Trajan Pro" font-size="16.6666667" font-weight="bold" letter-spacing="-0.0724637657" fill="#002147">
+                <tspan x="15" y="85">OF</tspan>
+                <tspan x="40.5050725" y="85" letter-spacing="0.0724637657"> </tspan>
+                <tspan x="45.5775362" y="85">R</tspan>
+                <tspan x="58.1608696" y="85" letter-spacing="-0.724637687">H</tspan>
+                <tspan x="73.6362319" y="85" letter-spacing="-0.579710126">O</tspan>
+                <tspan x="88.5065218" y="85" letter-spacing="-0.217391312">D</tspan>
+                <tspan x="103.88913" y="85">E</tspan>
+                <tspan x="114.35" y="85" letter-spacing="0.0724637657"> </tspan>
+                <tspan x="119.422464" y="85" letter-spacing="-0.217391312">I</tspan>
+                <tspan x="126.738406" y="85">S</tspan>
+                <tspan x="136.365942" y="85" letter-spacing="0.289855063">L</tspan>
+                <tspan x="146.73913" y="85">A</tspan>
+                <tspan x="158.405797" y="85" letter-spacing="-0.507246375">N</tspan>
+                <tspan x="173.681884" y="85">D</tspan>
+            </text>
+            <text id="THE" font-family="TrajanPro-Bold, Trajan Pro" font-size="16.6666667" font-weight="bold" fill="#002147">
+                <tspan x="14" y="29">THE</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
