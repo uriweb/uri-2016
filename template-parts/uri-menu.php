@@ -37,7 +37,7 @@
 				<div class="sub-nav">
 					<ul>
 						<li><a href="http://web.uri.edu/admission/">Undergraduate</a></li>
-						<li><a href="http://web.uri.edu/graduate-school/">Graduate</a></li>
+						<li><a href="http://web.uri.edu/graduate-school/admission/">Graduate</a></li>
 						<li><a href="http://web.uri.edu/globaluri/admission/">International</a></li>
 						<li><a href="http://web.uri.edu/enrollment/veterans/">Veterans</a></li>
 						<li><a href="http://web.uri.edu/admission/paying-for-uri/">Tuition and Fees</a></li>
@@ -54,7 +54,7 @@
 					<ul>
 						<li><a href="http://web.uri.edu/academics/">Academics Home</a></li>
 						<li><a href="http://web.uri.edu/advising/majors/">Majors</a></li>
-						<li><a href="http://web.uri.edu/graduate-school/degree-plans/">Graduate Programs</a></li>
+						<li><a href="http://web.uri.edu/graduate-school/">Graduate School</a></li>
 						<li><a href="http://web.uri.edu/catalog/">Course Catalog</a></li>
 						<li><a href="http://web.uri.edu/about/departments/">Colleges, Schools, and Departments</a></li>
 						<li><a href="http://web.uri.edu/career/">Career and Internships</a></li>

@@ -29,7 +29,7 @@ get_header();
 			<div class="intro services-intro">
 				<p>Our communications and marketing team upholds the University of Rhode Island brand and all of its promises in being an affordable university with outstanding students, alumni, faculty and staff. We ensure our message is being shared around the world and that it is clear, concise and consistent.</p>
 			
-				<p><a href="http://ppkr.local/news/wordpress/what-we-do/" class="intro-button button">Learn more about what we do.</a></p>
+				<!--p><a href="/what-we-do/" class="intro-button button">Learn more about what we do.</a></p-->
 			</div>
 			
 			<div class="self-service-wrapper">
@@ -60,7 +60,7 @@ get_header();
 					<div class="self-service resource-guides">
 						<h3>Guides and Policies</h3>
 						<ul>
-							<li><a href="http://ppkr.local/news/wordpress/what-we-do/uri-brand-visual-standards/">Brand Visual Style Guide</a></li>
+							<li><a href="https://today.uri.edu/what-we-do/uri-brand-visual-standards/">Brand Visual Style Guide</a></li>
 							<li><a href="https://uriweb.bitbucket.io">Web Style Guide</a></li>
 						</ul>
 					</div>
