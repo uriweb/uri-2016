@@ -50,10 +50,10 @@ get_header();
 					<div class="self-service resource-art">
 						<h3>Photos and Art</h3>
 						<ul>
-							<li><a href="http://uriphotography.photoshelter.com/archive">URI Photography</a></li>
+							<li><a href="https://www.flickr.com/photos/123450604@N07/albums">Campus Photos</a></li>
+							<li><a href="https://www.flickr.com/photos/48235974@N05/albums">Event Photos</a></li>
+							<li><a href="https://www.flickr.com/photos/urialumni/albums">Alumni Photos</a></li>
 							<li><a href="https://www.flickr.com/photos/123450604@N07/sets/72157670337959872">125th Anniversary Historic Photos</a></li>
-							<li><a href="http://uriphotography.photoshelter.com/gallery/URI-Logos/G0000n1lWE0SKe9E/1/">URI Logos</a></li>
-							<li><a href="https://drive.google.com/drive/folders/0B27sIR84YA5LTG9hUm1HRVlwWUU">125th Anniversary Logos</a></li>
 						</ul>
 					</div>
 
@@ -61,7 +61,6 @@ get_header();
 						<h3>Guides and Policies</h3>
 						<ul>
 							<li><a href="https://today.uri.edu/what-we-do/uri-brand-visual-standards/">Brand Visual Style Guide</a></li>
-							<li><a href="https://uriweb.bitbucket.io">Web Style Guide</a></li>
 						</ul>
 					</div>
 
