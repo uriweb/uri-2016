@@ -41,14 +41,15 @@ get_header();
 				<div class="cols thirds site">
 
 					<div class="self-service resource-templates">
-						<h3>Templates</h3>
+						<h3>Logos and Templates</h3>
 						<ul>
-							<li><a href="https://drive.google.com/drive/folders/0B27sIR84YA5LM2hTZHdpeGpkNHc">Office Documents</a></li>
+							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnza01oYWpEVTZzLWc">URI Entity Logos</a></li>
+							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnzM1lIVEJMWHpBYlU">Powerpoint Templates</a></li>
 						</ul>
 					</div>
 
 					<div class="self-service resource-art">
-						<h3>Photos and Art</h3>
+						<h3>Photos</h3>
 						<ul>
 							<li><a href="https://www.flickr.com/photos/123450604@N07/albums">Campus Photos</a></li>
 							<li><a href="https://www.flickr.com/photos/48235974@N05/albums">Event Photos</a></li>
@@ -61,6 +62,7 @@ get_header();
 						<h3>Guides and Policies</h3>
 						<ul>
 							<li><a href="https://today.uri.edu/what-we-do/uri-brand-visual-standards/">Brand Visual Style Guide</a></li>
+							<li><a href="#">Hiring from the Master Price Agreement</a></li>
 						</ul>
 					</div>
 
