@@ -27,7 +27,7 @@ get_header();
 			</header><!-- .page-header -->
 			
 			<div class="intro services-intro">
-				<p>Our communications and marketing team upholds the University of Rhode Island brand and all of its promises in being an affordable university with outstanding students, alumni, faculty and staff. We ensure our message is being shared around the world and that it is clear, concise and consistent.</p>
+				<p>Our communications team upholds the University of Rhode Island brand and all of its promises in being an affordable university with outstanding students, alumni, faculty and staff. We ensure our message is being shared around the world and that it is clear, concise and consistent.</p>
 			
 				<!--p><a href="/what-we-do/" class="intro-button button">Learn more about what we do.</a></p-->
 			</div>
@@ -43,8 +43,10 @@ get_header();
 					<div class="self-service resource-templates">
 						<h3>Logos and Templates</h3>
 						<ul>
-							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnza01oYWpEVTZzLWc">URI Entity Logos</a></li>
-							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnzM1lIVEJMWHpBYlU">Powerpoint Templates</a></li>
+						
+							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnzQ2lmRVhhNHVaREE">URI Logos</a></li>
+							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnzM1lIVEJMWHpBYlU">Templates</a></li>
+							
 						</ul>
 					</div>
 
@@ -61,8 +63,10 @@ get_header();
 					<div class="self-service resource-guides">
 						<h3>Guides and Policies</h3>
 						<ul>
-							<li><a href="https://today.uri.edu/what-we-do/uri-brand-visual-standards/">Brand Visual Style Guide</a></li>
-							<li><a href="#">Hiring from the Master Price Agreement</a></li>
+							<li><a href="/what-we-do/uri-brand-visual-standards/">Brand Visual Style Guide</a></li>
+							<li><a href="/what-we-do/mpa/">Hiring from the Master Price Agreement</a></li>
+							<li><a href="http://web.uri.edu/president/files/2015/05/Transformational-Goals-2010.pdf">Transformational Goals for the 21st Century</a></li>
+							<li><a href="http://web.uri.edu/academic-planning/files/academic_plan_handbook.pdf">Academic Strategic Plan</a></li>
 						</ul>
 					</div>
 
