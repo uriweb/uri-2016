@@ -44,7 +44,8 @@ get_header();
 						<h3>Logos and Templates</h3>
 						<ul>
 						
-							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnzQ2lmRVhhNHVaREE">URI Logos</a></li>
+							<li><a href="https://today.uri.edu/wp-content/uploads/2018/02/URI-Logo-and-Brandmark.zip">Logo and Tagline (.zip)</a></li>
+							<li><a href="https://today.uri.edu/logos/">More URI Logos</a></li>
 							<li><a href="https://drive.google.com/drive/folders/0Bx90U6Dr5fnzM1lIVEJMWHpBYlU">Templates</a></li>
 							
 						</ul>
@@ -53,20 +54,19 @@ get_header();
 					<div class="self-service resource-art">
 						<h3>Photos</h3>
 						<ul>
-							<li><a href="https://www.flickr.com/photos/123450604@N07/albums">Campus Photos</a></li>
-							<li><a href="https://www.flickr.com/photos/48235974@N05/albums">Event Photos</a></li>
+							<li><a href="https://uriphotography.photoshelter.com/index">URI Photos</a></li>
+							<li><a href="https://www.flickr.com/photos/123450604@N07/albums">Campus Photos [retiring 2019]</a></li>
+							<li><a href="https://www.flickr.com/photos/48235974@N05/albums">Event Photos [retiring 2019]</a></li>
 							<li><a href="https://www.flickr.com/photos/urialumni/albums">Alumni Photos</a></li>
-							<li><a href="https://www.flickr.com/photos/123450604@N07/sets/72157670337959872">125th Anniversary Historic Photos</a></li>
 						</ul>
 					</div>
 
 					<div class="self-service resource-guides">
 						<h3>Guides and Policies</h3>
 						<ul>
+							<li><a href="https://today.uri.edu/what-we-do/policies-and-guidelines/">University Policies and Guidelines</a></li>
 							<li><a href="/what-we-do/uri-brand-visual-standards/">Brand Visual Style Guide</a></li>
 							<li><a href="/what-we-do/mpa/">Hiring from the Master Price Agreement</a></li>
-							<li><a href="http://web.uri.edu/president/files/2015/05/Transformational-Goals-2010.pdf">Transformational Goals for the 21st Century</a></li>
-							<li><a href="http://web.uri.edu/academic-planning/files/academic_plan_handbook.pdf">Academic Strategic Plan</a></li>
 						</ul>
 					</div>
 

@@ -50,7 +50,30 @@
 				//}
 				//print '</hgroup>';
 			}
-			uri2016_posted_on();
+			echo '<div class="posted-by">';
+
+			if( is_array( $media_contacts ) ):
+			?>
+			
+					<span class="media-contact">Media Contact<?php print (count($media_contacts) == 1) ? '' : 's'; ?>:</span>
+					<?php foreach($media_contacts as $c): ?>
+						<span class="media-name"><a href="mailto:<?php print $c['email']; ?>"><?php print $c['name']; ?></a></span>,
+						<span class="media-tel"><?php print $c['telephone']; ?></span>
+						<span class="divider">|</span>
+					<?php endforeach; ?>
+				<?php 
+			endif;
+
+
+			?>			
+
+			<span class="share-label">Share:</span>
+			<a href="http://twitter.com/share?text=<?php the_title() ?>
+				&amp;url=<?php esc_url( the_permalink() ) ?>" title="Share on Twitter" class="share-twitter" target="_blank" rel="nofollow noopener">Twitter</a>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=<?php esc_url( the_permalink() ) ?>" title="Share on Facebook" class="share-facebook" target="_blank" rel="nofollow noopener">Facebook</a>
+						
+		<?php
+			echo '</div>';
 		?>
 
 	</header><!-- .entry-header -->

@@ -209,6 +209,32 @@ nav .search-wrapper {
 	white-space: nowrap;
 }
 
+.posted-by {
+	.share-twitter, .share-facebook {
+		background: transparent url(img/social/facebook-share.png) 50% 50% no-repeat;
+		background-size: 18px;
+		border: 1px solid #fff;
+		border-radius: 2px;
+		display: inline-block;
+		margin-right: .25rem;
+		text-indent: -999rem;
+		width: 1.5em; height: 1.5em;
+		
+	}
+	.share-twitter {
+		background-image: url(img/social/twitter-share.png);
+	}
+	.share-twitter:focus, .share-facebook:focus, .share-twitter:hover, .share-facebook:hover {
+		background-color: #eee;
+		border: 1px solid #002147;
+	}
+	
+	.divider {
+		display: inline-block;
+		margin: 0 .75rem;
+	}
+}
+
 .expertise {
 	margin-top: 1em;
 	padding-top: 1em;

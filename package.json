@@ -4,7 +4,6 @@
   "description": "A wordpress theme for URI Today",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1",
     "gulp-header": "^1.7.1"
   },
   "devDependencies": {
