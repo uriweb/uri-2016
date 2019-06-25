@@ -52,7 +52,7 @@
 			}
 			echo '<div class="posted-by">';
 
-			if( is_array( $media_contacts ) ):
+			if( is_single() && is_array( $media_contacts ) ):
 			?>
 			
 					<span class="media-contact">Media Contact<?php print (count($media_contacts) == 1) ? '' : 's'; ?>:</span>
@@ -65,6 +65,7 @@
 			endif;
 
 
+			if( is_single() ):
 			?>			
 
 			<span class="share-label">Share:</span>
@@ -72,9 +73,8 @@
 				&amp;url=<?php esc_url( the_permalink() ) ?>" title="Share on Twitter" class="share-twitter" target="_blank" rel="nofollow noopener">Twitter</a>
 			<a href="https://www.facebook.com/sharer/sharer.php?u=<?php esc_url( the_permalink() ) ?>" title="Share on Facebook" class="share-facebook" target="_blank" rel="nofollow noopener">Facebook</a>
 						
-		<?php
-			echo '</div>';
-		?>
+		<?php endif; ?>
+		</div>
 
 	</header><!-- .entry-header -->
 
